@@ -1,7 +1,10 @@
 {
     
     "header":{
-        "HELLO": "prova traduzione"
+        "HELLO": "traduction"
+    },
+    "footer":{
+        "link": "traduction"
     }
     
 }
