@@ -1,7 +1,10 @@
 {
     
     "header":{
-        "HELLO": "prova traduzione 2"
+        "title": "Ministero della Salute",
+        "link": "Home page delle tue applicazioni",
+        "help": "Aiuto",
+        "header":"Sistema Informativo dei Trapianti"
     },
     "footer":{
         "link": "prova traduzione"

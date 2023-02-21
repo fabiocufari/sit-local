@@ -1,10 +1,13 @@
 {
     
     "header":{
-        "HELLO": "traduction"
+        "title": "Ministero della Salute (en)",
+        "link": "Homepage delle tue applicazioni (en)",
+        "help": "Help",
+        "header":"Sistema Informativo dei Trapianti (en)"
     },
     "footer":{
-        "link": "traduction"
+        "link": "prova traduzione (en)"
     }
     
 }
