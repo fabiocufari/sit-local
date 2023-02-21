@@ -8,9 +8,9 @@ import { ModalService } from '../modal/modal.service';
 })
 export class ModalComponent implements OnInit {
   
-  
+  title=''
   isOpen={"status": false}
-  
+  response: any
 
   constructor(private modalService: ModalService) {
   }
@@ -18,7 +18,12 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {
     this.modalService.status.subscribe((val: boolean) => {
       this.isOpen = {"status": val};
-  });
+      this.title=this.modalService.title
+    });
+  }
+
+  onClose(e: any){
+    this.modalService.setResponse(this.response)
   }
 
 }

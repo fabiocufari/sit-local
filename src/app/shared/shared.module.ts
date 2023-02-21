@@ -11,6 +11,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import {LoaderService} from './components/loader/loader.service';
 import { ModalComponent } from './components/modal/modal.component';
 import { ModalService } from './components/modal/modal.service';
+import { CustomCardComponent } from './components/custom-card/custom-card.component';
+import { CustomUploadComponent } from './components/custom-upload/custom-upload.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -21,6 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     LoaderComponent,
     ModalComponent,
+    CustomCardComponent,
+    CustomUploadComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +43,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     LoaderComponent,
     ModalComponent,
+    CustomCardComponent,
+    CustomUploadComponent,
     TranslateModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,0 +1,23 @@
+<div  style="border:3px solid blue; border-radius: 10px;">
+    
+<ds-icon  ico-size="medium" [attr.ico-type]="icon" style="position: relative;
+background: white;
+top: -22px;
+width: fit-content;
+left: 10px;">
+</ds-icon>
+  <ds-hero-banner has-txt-right="" has-txt-down="" banner-type="default"  bkg-color="bkg" image-width="60" >
+    <div slot="main-text" >
+      <ds-hero-banner-text >
+        <h5 slot="title">{{title}}</h5>
+
+        <div slot="cta">
+          <ds-button type="button" color="primary" size="small" title="Click the button"
+            aria-label="This is the label for screen readers" ico-type="navigazione:freccia_right" ico-right="">
+            Entra
+          </ds-button>
+        </div>
+      </ds-hero-banner-text>
+    </div>
+  </ds-hero-banner>
+</div>
