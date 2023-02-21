@@ -1,0 +1,438 @@
+<!-- Navigation Accessibility component -->
+<ds-loader is-visible=""></ds-loader>
+<ds-navigation-access></ds-navigation-access>
+<!-- Header component --><ds-header state="large">
+  <ds-header-top-left slot="content-top-left">
+    <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+      Link 1
+    </ds-link>
+  </ds-header-top-left>
+  <ds-header-top-right-large slot="content-top-right">
+    <ds-link aria-label="lorem link right" slot="header-link-right" color="primary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+      Link 2
+    </ds-link>
+
+    <ds-tooltip slot="header-tooltip-right" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
+      <ds-link slot="invoker" tabindex="0" aria-label="This is the label for screen readers tooltip" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark" sr-text="Active Language" ico-type="navigazione:chevron_down" ico-right="" ico-size="small">
+        Ita
+      </ds-link>
+
+      <div slot="content" class="z-index-1">
+        <ds-tooltip-content-icon>
+          <ul slot="link-list">
+            <li>
+              <ds-link aria-label="lorem ipsum"> Lorem ipsum </ds-link>
+            </li>
+            <li>
+              <ds-link aria-label="lorem sit"> Lorem ipsum </ds-link>
+            </li>
+          </ul>
+        </ds-tooltip-content-icon>
+      </div>
+    </ds-tooltip>
+
+    <ds-tooltip slot="header-avatar" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
+      <ds-avatar class="demo-tooltip-invoker" slot="invoker" tabindex="0" aria-label="Lorem ipsum">
+        <span aria-hidden="true">MR</span>
+      </ds-avatar>
+      <ds-tooltip-content-avatar slot="content" name="Mario Rossi" description="lorem ipsum" class="z-index-1">
+        <ds-link aria-label="lorem ipsum exit" slot="link" color="secondary" mode="light" sr-text="lorem ipsum" href="#">
+          Link exit
+        </ds-link>
+      </ds-tooltip-content-avatar>
+    </ds-tooltip>
+  </ds-header-top-right-large>
+  <ds-header-login slot="header-login" ico-type="navigazione:menu" label-menu-icon="lorem ipsum">
+    <span slot="header-title">Lorem ipsum</span>
+    <ds-link slot="header-link-support-desktop" color="primary" mode="light">
+      Link 3
+    </ds-link>
+    <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="generali:supporto">
+    </ds-icon-button>
+  </ds-header-login>
+
+  <ds-navigation-menu slot="menu-navigation">
+    <ds-navigation-menu-content slot="content" name="Mario Rossi" description="lorem ipsum" ico-type="navigazione:chiudi" ico-size="medium" ico-type-mobile="navigazione:chiudi_white" ico-size-mobile="small" ico-back-size="small" ico-back-type="navigazione:freccia_left">
+      &gt;
+      <span slot="title-menu">Lorem ipsum</span>
+
+      <span slot="title-menu-back">Back</span>
+      <ds-avatar slot="avatar" type="image"> MR </ds-avatar>
+      <ds-link slot="link" aria-label="This is the label for screen link" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark">
+        Link exit
+      </ds-link>
+      <ds-link slot="home-link" aria-label="This is the label for screen readers home" accessible-label-when-disabled="Link disabled until previous operation done" color="primary" mode="light">
+        Link 2
+      </ds-link>
+      <span slot="title-menu-mobile">Lorem ipsum et sunt nostrud.</span>
+
+      <ul slot="content-list">
+        
+    <li>
+      <ds-list-item id="0">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="1" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item has-sublevels="" id="2" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu with sublevel 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="3" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="4" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+      </ul>
+    </ds-navigation-menu-content>
+  </ds-navigation-menu>
+</ds-header>
+<ds-table no-data-message="No Data Lorem Ipsum" pagination-type="server" page-elements-option-label="elementi"
+  current-page="1" page-elements-label="Label per page" page-elements-options="10,15,20,50" page-elements-default="10"
+  caption="Lorem Ipsum" first-row-sticky="" first-column-sticky="" last-column-sticky="">
+</ds-table>
+
+<!-- ds-table + ds-dialog -->
+<ds-form>
+  <form>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input name="input" label="Input"  placeholder="Placeholder text"></ds-input>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-select-rich name="select" label="Select">
+            <ds-select-rich-option hidden="">Select Option</ds-select-rich-option>
+            <ds-select-rich-option>Option 1</ds-select-rich-option>
+            <ds-select-rich-option>Option 2</ds-select-rich-option>
+            <ds-select-rich-option>Option 3</ds-select-rich-option>
+            <ds-select-rich-option>Option 4</ds-select-rich-option>
+            <ds-select-rich-option>Option 5</ds-select-rich-option>
+            <ds-select-rich-option>Option 6</ds-select-rich-option>
+            <ds-select-rich-option>Option 7</ds-select-rich-option>
+            <ds-select-rich-option>Option 8</ds-select-rich-option>
+            <ds-select-rich-option>Option 9</ds-select-rich-option>
+            <ds-select-rich-option>Option 10</ds-select-rich-option>
+          </ds-select-rich>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input-email label="Email" placeholder="name@example.com " name="email">
+          </ds-input-email>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input-time label="Time" value="00:00" time-format="PM" text-set-time="Apply" name="time"></ds-input-time>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input-date label="Date" placeholder="MM/GG/AAAA" name="date">
+          </ds-input-date>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input-calendar placeholder="MM/GG/AAAA" label="Calendar" locale="it-IT" name="calendar">
+          </ds-input-calendar>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-input-upload text="Choose File" label="Upload" name="upload" accept=".pdf" capture="" ico-label="Lorem Ipsum" ico-file="status:conferma" ico-delete="azioni:elimina" btn-label="Lorem Ipsum"></ds-input-upload>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-autocomplete id="combobox" label="Autocomplete" placeholder="Placeholder text" suggestion-message="No suggestions available" loader-message="Lorem ipsum..." name="autocomplete"></ds-autocomplete>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <ds-toggle label="Toggle" name="toggle"></ds-toggle>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6">
+          <ds-select-rich-multiple aria-label="lorem-ipsum" multiple-choice="" has-no-default-selected="" name="select-rich" label="Select multiple" searchbar-placeholder="Search..." placeholder="Select Option" selection-button-text="selected items" close-button-title="closes">
+            <ds-select-rich-option-multiple>Option 0</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 1</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 2</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 3</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 4</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 5</ds-select-rich-option-multiple>
+            <ds-select-rich-option-multiple>Option 6</ds-select-rich-option-multiple>
+          </ds-select-rich-multiple>
+        </div>
+        <div class="col-12 col-lg-6">
+          <ds-input-amount required="" label="Amount" placeholder="000.00" name="amount"></ds-input-amount>
+        </div>
+        <div class="col-12 col-md-3">
+          <ds-input-radio-group name="labels" label="Radio box">
+            
+    <ds-input-radio label="Label 1"></ds-input-radio>
+  
+    <ds-input-radio label="Label 2"></ds-input-radio>
+  
+    <ds-input-radio label="Label 3"></ds-input-radio>
+  
+            <ds-input-radio label="Label-four"></ds-input-radio>
+          </ds-input-radio-group>
+        </div>
+        <div class="col-12 col-md-3">
+          <ds-input-checkbox-group name="labels[]" label="Checkbox" checkbox="">
+            <ds-input-checkbox label="Label 1" checkbox-value="value1"></ds-input-checkbox>
+            <ds-input-checkbox label="Label 2" checkbox-value="value2"></ds-input-checkbox>
+            <ds-input-checkbox label="Label 3" checkbox-value="value3"></ds-input-checkbox>
+            <ds-input-checkbox label="Label 4" checkbox-value="value4" checked=""></ds-input-checkbox>
+          </ds-input-checkbox-group>
+        </div>
+        <div class="col-12 col-md-6">
+          <ds-textarea required="" style="resize: auto" label="Textarea" max-rows="8" rows="5" placeholder="Placeholder text" name="textarea">
+          </ds-textarea>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div>
+          <ds-button-reset size="small" color="primary" title="reset">Reset</ds-button-reset>
+          <ds-button-submit size="small" color="primary" title="Submit">Submit</ds-button-submit>
+        </div>
+      </div>
+      <!-- chiusura container -->
+    </div>
+  </form>
+</ds-form>
+
+
+<ds-dialog>
+  <!-- content -->
+  <ds-dialog-input-content slot="content">
+    <!-- title -->
+    <span slot="modal-title">ds-table + ds-dialog</span>
+    <!-- main -->
+    <div slot="modal-input-content-row" class="row">
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">Lorem ipsum dolor sit</div>
+      </ds-dialog-content-unit>
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">Lorem ipsum dolor sit amet</div>
+      </ds-dialog-content-unit>
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">Lorem ipsum dolor sit amet</div>
+      </ds-dialog-content-unit>
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">1234567890</div>
+      </ds-dialog-content-unit>
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">ABCD-12345</div>
+      </ds-dialog-content-unit>
+      <ds-dialog-content-unit class="col-12 col-md-4">
+        <div slot="unit-title">Label</div>
+        <div slot="unit-text">GG/MM/AAAA</div>
+      </ds-dialog-content-unit>
+    </div>
+    <!-- form -->
+    <div slot="modal-input-row" class="row">
+      <div class="col-12 col-md-6">
+        <ds-input name="lorem1" label="Label" placeholder="Placeholder text">
+        </ds-input>
+      </div>
+      <div class="col-12 col-md-6">
+        <ds-input-date name="ipsum" label="Label" placeholder="GG/MM/AAAA">
+        </ds-input-date>
+      </div>
+    </div>
+    <!-- footer - submit -->
+    <div slot="modal-input-footer">
+      <ds-button class="close-invoker" type="reset" size="regular" color="secondary">
+        CANCEL
+      </ds-button>
+      <ds-button class="close-invoker" type="submit" size="regular" color="primary">
+        CONFIRM
+      </ds-button>
+    </div>
+  </ds-dialog-input-content>
+</ds-dialog>
+<ds-footer state="small">
+  <!-- heading logo -->
+  <figure slot="logo-1">
+    <img src="https://i.ibb.co/HzXCpp1/ministero-della-salute.png" aria-label="logo" alt="logo-1">
+  </figure>
+  <figure slot="logo-2">
+    <img src="https://i.ibb.co/G3wTTmy/UE.png" aria-label="logo" alt="logo-2">
+  </figure>
+  <figure slot="logo-3">
+    <img src="https://i.ibb.co/YNXZS1G/italiadomani.png" aria-label="logo" alt="logo-3">
+  </figure>
+  <!-- SMALL -->
+  <!-- heading right -->
+  <div slot="heading-small-right-link">
+    <ds-link mode="dark" color="secondary" sr-text="link esterno apre nuova scheda" href="#">Link footer 1</ds-link>
+  </div>
+  <!-- footer -->
+  <div slot="footer-small-content">
+    <ds-footer-link-list has-horizontal="">
+      <ul slot="link-list" role="list" aria-label="lorem ipsum sit" class="horizontal">
+        
+    <li id="0">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 1
+      </ds-link>
+    </li>
+  
+    <li id="1">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 2
+      </ds-link>
+    </li>
+  
+      </ul>
+    </ds-footer-link-list>
+  </div>
+
+  <!-- LARGE -->
+  <!-- main-content-left -->
+  <div slot="title-left">Label link left</div>
+  <div slot="main-content-left-column-left">
+    <ds-footer-link-list>
+      <ul slot="link-list">
+        
+    <li id="column-left-link-0">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 1
+      </ds-link>
+    </li>
+  
+    <li id="column-left-link-1">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 2
+      </ds-link>
+    </li>
+  
+    <li id="column-left-link-2">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 3
+      </ds-link>
+    </li>
+  
+      </ul>
+    </ds-footer-link-list>
+  </div>
+  <div slot="main-content-left-column-right">
+    <ds-footer-link-list>
+      <ul slot="link-list">
+        
+    <li id="column-right-link-0">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 1
+      </ds-link>
+    </li>
+  
+    <li id="column-right-link-1">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 2
+      </ds-link>
+    </li>
+  
+    <li id="column-right-link-2">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 3
+      </ds-link>
+    </li>
+  
+      </ul>
+    </ds-footer-link-list>
+  </div>
+  <!-- main-content-right -->
+  <div slot="title-right">Label link right</div>
+  <div slot="main-content-right">
+    <ds-footer-link-list>
+      <ul slot="link-list">
+        
+    <li id="content-right-link-0">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 1
+      </ds-link>
+    </li>
+  
+    <li id="content-right-link-1">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 2
+      </ds-link>
+    </li>
+  
+    <li id="content-right-link-2">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 3
+      </ds-link>
+    </li>
+  
+    <li id="content-right-link-3">
+      <ds-link color="secondary" mode="dark" sr-text="link esterno apre nuova scheda" href="#">
+        Link 4
+      </ds-link>
+    </li>
+  
+      </ul>
+    </ds-footer-link-list>
+  </div>
+  <!-- footer links -->
+  <div slot="footer-content">
+    <ds-footer-link-list>
+      <ul slot="link-list" role="list" aria-label="lorem ipsum sit" class="">
+        
+    <li id="list-b2sipemgj6">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 1
+      </ds-link>
+    </li>
+  
+    <li id="list-2wvocrz2n6">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 2
+      </ds-link>
+    </li>
+  
+    <li id="list-3axeat1psl">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 3
+      </ds-link>
+    </li>
+  
+    <li id="list-jbuvgoc2sf">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 4
+      </ds-link>
+    </li>
+  
+    <li id="list-0lvowj6gtv">
+      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+        Link 5
+      </ds-link>
+    </li>
+  
+      </ul>
+    </ds-footer-link-list>
+  </div>
+</ds-footer>
