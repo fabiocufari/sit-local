@@ -1,0 +1,117 @@
+<ds-navigation-access></ds-navigation-access>
+<!-- Header component --><ds-header state="large">
+  <ds-header-top-left slot="content-top-left">
+    <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+      Link 1
+    </ds-link>
+  </ds-header-top-left>
+  <ds-header-top-right-large slot="content-top-right">
+    <ds-link aria-label="lorem link right" slot="header-link-right" color="primary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+      Link 2
+    </ds-link>
+
+    <ds-tooltip slot="header-tooltip-right" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
+      <ds-link slot="invoker" tabindex="0" aria-label="This is the label for screen readers tooltip" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark" sr-text="Active Language" ico-type="navigazione:chevron_down" ico-right="" ico-size="small">
+        Ita
+      </ds-link>
+
+      <div slot="content" class="z-index-1">
+        <ds-tooltip-content-icon>
+          <ul slot="link-list">
+            <li>
+              <ds-link aria-label="lorem ipsum"> Lorem ipsum </ds-link>
+            </li>
+            <li>
+              <ds-link aria-label="lorem sit"> Lorem ipsum </ds-link>
+            </li>
+          </ul>
+        </ds-tooltip-content-icon>
+      </div>
+    </ds-tooltip>
+
+    <ds-tooltip slot="header-avatar" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
+      <ds-avatar class="demo-tooltip-invoker" slot="invoker" tabindex="0" aria-label="Lorem ipsum">
+        <span aria-hidden="true">MR</span>
+      </ds-avatar>
+      <ds-tooltip-content-avatar slot="content" name="Mario Rossi" description="lorem ipsum" class="z-index-1">
+        <ds-link aria-label="lorem ipsum exit" slot="link" color="secondary" mode="light" sr-text="lorem ipsum" href="#">
+          Link exit
+        </ds-link>
+      </ds-tooltip-content-avatar>
+    </ds-tooltip>
+  </ds-header-top-right-large>
+  <ds-header-login slot="header-login" ico-type="navigazione:menu" label-menu-icon="lorem ipsum">
+    <span slot="header-title">Lorem ipsum</span>
+    <ds-link slot="header-link-support-desktop" color="primary" mode="light">
+      Link 3
+    </ds-link>
+    <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="generali:supporto">
+    </ds-icon-button>
+  </ds-header-login>
+
+  <ds-navigation-menu slot="menu-navigation">
+    <ds-navigation-menu-content slot="content" name="Mario Rossi" description="lorem ipsum" ico-type="navigazione:chiudi" ico-size="medium" ico-type-mobile="navigazione:chiudi_white" ico-size-mobile="small" ico-back-size="small" ico-back-type="navigazione:freccia_left">
+      &gt;
+      <span slot="title-menu">Lorem ipsum</span>
+
+      <span slot="title-menu-back">Back</span>
+      <ds-avatar slot="avatar" type="image"> MR </ds-avatar>
+      <ds-link slot="link" aria-label="This is the label for screen link" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark">
+        Link exit
+      </ds-link>
+      <ds-link slot="home-link" aria-label="This is the label for screen readers home" accessible-label-when-disabled="Link disabled until previous operation done" color="primary" mode="light">
+        Link 2
+      </ds-link>
+      <span slot="title-menu-mobile">Lorem ipsum et sunt nostrud.</span>
+
+      <ul slot="content-list">
+        
+    <li>
+      <ds-list-item id="0">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="1" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item has-sublevels="" id="2" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu with sublevel 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="3" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+    <li>
+      <ds-list-item id="4" ico-size="small" ico-type="navigazione:freccia_right">
+        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
+        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
+          Link menu level 0
+        </ds-link>
+      </ds-list-item>
+    </li>
+  
+      </ul>
+    </ds-navigation-menu-content>
+  </ds-navigation-menu>
+</ds-header>
