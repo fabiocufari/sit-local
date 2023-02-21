@@ -2,7 +2,7 @@
 <!-- Header component --><ds-header state="large">
   <ds-header-top-left slot="content-top-left">
     <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-      Link 1
+        {{ 'header.HELLO' | translate }}
     </ds-link>
   </ds-header-top-left>
   <ds-header-top-right-large slot="content-top-right">
@@ -12,17 +12,17 @@
 
     <ds-tooltip slot="header-tooltip-right" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
       <ds-link slot="invoker" tabindex="0" aria-label="This is the label for screen readers tooltip" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark" sr-text="Active Language" ico-type="navigazione:chevron_down" ico-right="" ico-size="small">
-        Ita
+        {{currentLang | uppercase}}
       </ds-link>
 
       <div slot="content" class="z-index-1">
         <ds-tooltip-content-icon>
           <ul slot="link-list">
             <li>
-              <ds-link aria-label="lorem ipsum"> Lorem ipsum </ds-link>
+              <ds-link (click)="changeLanguage('it')" aria-label="lorem ipsum"> IT </ds-link>
             </li>
             <li>
-              <ds-link aria-label="lorem sit"> Lorem ipsum </ds-link>
+              <ds-link (click)="changeLanguage('en')" aria-label="lorem sit"> EN </ds-link>
             </li>
           </ul>
         </ds-tooltip-content-icon>
