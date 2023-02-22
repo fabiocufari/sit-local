@@ -30,13 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CommonModule,
     SharedRoutingModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      },
-      defaultLanguage: 'it'})
+  TranslateModule
   ],
   exports: [
     HeaderComponent,
@@ -45,7 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ModalComponent,
     CustomCardComponent,
     CustomUploadComponent,
-    TranslateModule
+   
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
