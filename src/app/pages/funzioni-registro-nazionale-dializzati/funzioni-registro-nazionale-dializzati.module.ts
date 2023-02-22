@@ -6,7 +6,12 @@ import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AcquisizioneDatiRegistroRegionaleComponent } from './acquisizione-dati-registro-regionale/acquisizione-dati-registro-regionale.component';
 import { ConsultazioneEsitoAcquisizioneComponent } from './consultazione-esito-acquisizione/consultazione-esito-acquisizione.component';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -17,8 +22,10 @@ import { ConsultazioneEsitoAcquisizioneComponent } from './consultazione-esito-a
   imports: [
     CommonModule,
     SharedModule,
+    TranslateModule,
     FunzioniRegistroNazionaleDializzatiRoutingModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA],
+  exports :[TranslateModule]
 })
 export class FunzioniRegistroNazionaleDializzatiModule { }
