@@ -8,6 +8,8 @@
     },
     "footer":{
         "link": "prova traduzione (en)"
+    },
+    "custom-card":{
+        "select-file-text": "Select File"
     }
-    
 }

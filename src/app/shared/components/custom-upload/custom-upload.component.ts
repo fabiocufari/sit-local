@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-custom-upload',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-upload.component.scss']
 })
 export class CustomUploadComponent implements OnInit {
-
+  @Input("title") title:string=''
   constructor() { }
 
   ngOnInit(): void {
