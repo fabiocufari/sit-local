@@ -1,2 +1,7 @@
 node_modules
 .angular
+angular
+.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/index.pack.old
+.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/index.pack
+.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/2.pack
+.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/1.pack

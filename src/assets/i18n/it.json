@@ -1,10 +1,15 @@
 {
     
     "header":{
-        "HELLO": "prova traduzione"
+        "title": "Ministero della Salute",
+        "link": "Home page delle tue applicazioni",
+        "help": "Aiuto",
+        "header":"Sistema Informativo dei Trapianti"
     },
     "footer":{
         "link": "prova traduzione"
+    },
+    "custom-card":{
+        "select-file-text": "Segli file"
     }
-    
 }

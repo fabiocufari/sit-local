@@ -1,8 +1,8 @@
-<ds-dialog>
+<ds-dialog [isOpen]="isOpen" (onDialogClose)="onClose($event)">
  
-    <ds-dialog-notice-content slot="content" ico-type="generali:alert" ico-size="medium small" ico-label="Lorem Ipsum" ico-label-close="close" has-close-button="">
+    <ds-dialog-notice-content   slot="content" ico-type="generali:alert" ico-size="medium small" ico-label="Lorem Ipsum" ico-label-close="close" has-close-button="">
       <!-- title -->
-      <h2 slot="modal-title">Lorem Ipsum</h2>
+      <h2 slot="modal-title">{{title}}</h2>
       <!-- main -->
       <p slot="modal-notice-main" class="close-invoker">
         Lorem ipsum dolor sit amet? Consectetur adipiscing elit, sed do eiusmod
@@ -10,10 +10,10 @@
       </p>
       <!-- modal-notice-footer -->
       <div slot="modal-notice-footer">
-        <ds-button class="close-invoker" type="reset" size="regular" color="secondary">
+        <ds-button class="close-invoker" (click)="response='Close'" type="reset" size="regular" color="secondary">
           BACK
         </ds-button>
-        <ds-button class="close-invoker" type="confirm" size="regular" color="primary">
+        <ds-button class="close-invoker" (click)="response='Confrim'" type="confirm" size="regular" color="primary">
           CONFIRM
         </ds-button>
       </div>

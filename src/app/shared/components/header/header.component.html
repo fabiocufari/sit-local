@@ -2,12 +2,12 @@
 <!-- Header component --><ds-header state="large">
   <ds-header-top-left slot="content-top-left">
     <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        {{ 'header.HELLO' | translate }}
+        {{ 'header.title' | translate }}
     </ds-link>
   </ds-header-top-left>
   <ds-header-top-right-large slot="content-top-right">
     <ds-link aria-label="lorem link right" slot="header-link-right" color="primary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-      Link 2
+        {{ 'header.link' | translate }}
     </ds-link>
 
     <ds-tooltip slot="header-tooltip-right" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
@@ -41,9 +41,9 @@
     </ds-tooltip>
   </ds-header-top-right-large>
   <ds-header-login slot="header-login" ico-type="navigazione:menu" label-menu-icon="lorem ipsum">
-    <span slot="header-title">Lorem ipsum</span>
-    <ds-link slot="header-link-support-desktop" color="primary" mode="light">
-      Link 3
+    <span slot="header-title">{{ 'header.header' | translate }}</span>
+    <ds-link slot="header-link-support-desktop" color="primary" mode="light" ico-type="generali:supporto"  ico-size="small">
+        {{ 'header.help' | translate }}
     </ds-link>
     <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="generali:supporto">
     </ds-icon-button>
