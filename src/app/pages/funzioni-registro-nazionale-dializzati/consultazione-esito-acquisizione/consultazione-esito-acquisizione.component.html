@@ -1,15 +1,17 @@
-<div class="container mt-5 mb-5">
-    <div class="row">
-  
-      <div class="col">
-        <ds-breadcrumb heading-level="3" heading-label="Path of navigation" show-heading="">
-          <ds-breadcrumb-item text="Main page" item-link="mainPage.html"></ds-breadcrumb-item>
-          <ds-breadcrumb-item text="Second level page"></ds-breadcrumb-item>
-          <ds-breadcrumb-item text="Third level page" disabled="true"></ds-breadcrumb-item>
-          <ds-breadcrumb-item text="Current page"></ds-breadcrumb-item>
-        </ds-breadcrumb>
-      </div>
-    </div>
-  
+<div class="container mt-1 mb-5">
+
+  <app-title-section title="Consultazione Esito Acquisizione" icon="generali:ricerca"></app-title-section>
+
+  <app-search-box></app-search-box>
+
+  <!-- Tabella -->
+  <div class="mt-3">
+    <ds-table no-data-message="Non ci sono dati da mostrare" pagination-type="client" [headers]="headers" [data]="data"
+     page-elements-option-label="" current-page="1" page-elements-label="Label per page"
+     page-elements-options="10,15,20,50" page-elements-default="10" caption="Tabella"
+     first-row-sticky="" first-column-sticky="" last-column-sticky="">
+    </ds-table>
   </div>
-  
+  <!-- Tabella -->
+
+  </div>
