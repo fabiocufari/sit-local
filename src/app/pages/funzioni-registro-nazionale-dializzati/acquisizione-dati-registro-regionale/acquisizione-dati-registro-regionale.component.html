@@ -1,15 +1,67 @@
 <div class="container mb-5 mt-1 general">
   <app-title-section title="Acquisizione Dati Registro Regionale" icon="azioni:download"></app-title-section>
+
+<!-- BLOCCO FORM -->
+<div style="display: none;">
+  <h4 class="ff-roboto-h4 mt-4 text-uppercase bold">Allega Documenti</h4>
+  <p class="ff-roboto-body">Sono ammessi file con estensione .txt, .zip, e con un limite di record di 10.000.<br/>
+    Per il servizio scelto sono richiesti i seguenti documenti:
+  </p>
+
   <div class="row mt-3 pt-5 justify-content-center">
 
-    <div class="col-3">
+    <div class="col-4">
       <app-custom-upload title="INVIA DATI ANAGRAFICI"></app-custom-upload>
     </div>
-    <div class="col-3">
+    <div class="col-4">
       <app-custom-upload title="INVIA DATI SULLE COMORBIDITA'"></app-custom-upload>
     </div>
-    <div class="col-3">
+    <div class="col-4">
       <app-custom-upload title="INVIA DATI RELATIVI AGLI EVENTI"></app-custom-upload>
     </div>
   </div>
+  <div class="mt-5 mb-4">
+    <ds-button type="button" class="f-left" color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+      Indietro
+    </ds-button>
+    <ds-button type="button" class="f-right" color="primary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+      Invia
+    </ds-button>
+  </div>
+</div>
+<!-- BLOCCO FORM -->
+<!-- BLOCCO RESULTS -->
+<div>
+  <h3 class="ff-roboto-h3 bold text-center mt-5 mb-3">Esito invio Registro Dializzati</h3>
+  <div class="box-standard result p-4">
+    <div class="row">
+      <div class="col">
+        <h5 class="ff-roboto-h5 text-uppercase bold">Anagrafica</h5>
+        <p class="ff-roboto-body">Inviato: SI</p>
+        <p class="ff-roboto-body">Esito invio: POSITIVO</p>
+        <p class="ff-roboto-body">Messaggi: SIZE = 288</p>
+      </div>
+      <div class="col">
+        <h5 class="ff-roboto-h5 text-uppercase bold">Comorbidità</h5>
+        <p class="ff-roboto-body">Inviato: SI</p>
+        <p class="ff-roboto-body">Esito invio: POSITIVO</p>
+        <p class="ff-roboto-body">Messaggi: SIZE = 122</p>
+      </div>
+      <div class="col">
+        <h5 class="ff-roboto-h5 text-uppercase bold">Eventi</h5>
+        <p class="ff-roboto-body">Inviato: SI</p>
+        <p class="ff-roboto-body">Esito invio: POSITIVO</p>
+        <p class="ff-roboto-body">Messaggi: SIZE = 262</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 mb-4">
+    <ds-button type="button"  color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+    Indietro
+  </ds-button>
+
+</div>
+</div>
+<!-- BLOCCO RESULTS -->
+
 </div>

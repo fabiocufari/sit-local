@@ -1,0 +1,113 @@
+<div class="container mt-2 mb-5 general ms-6">
+
+  <app-title-section title="Esportazione Dati Registro Dializzati" icon="azioni:scaricaFile"></app-title-section>
+  <!-- form 1 -->
+  <div >
+  <form>
+  <h4 class="ff-roboto-h4 bold text-center mt-5 mb-3">Seleziona Anno e Agenzia Regionale</h4>
+
+  <div class="d-flex justify-content-center">
+    <div class="box-standard p-4">
+
+        <div class="row">
+          <div class="col">
+            <ds-select-rich name="annoRiferimento" label="Anno di Riferimento" has-no-default-selected="" placeholder="Inserisci anno di riferimento">
+              <ds-select-rich-option>Option 1</ds-select-rich-option>
+              <ds-select-rich-option>Option 2</ds-select-rich-option>
+              <ds-select-rich-option>Option 3</ds-select-rich-option>
+              <ds-select-rich-option>Option 4</ds-select-rich-option>
+              <ds-select-rich-option>Option 5</ds-select-rich-option>
+              <ds-select-rich-option>Option 6</ds-select-rich-option>
+              <ds-select-rich-option>Option 7</ds-select-rich-option>
+              <ds-select-rich-option>Option 8</ds-select-rich-option>
+              <ds-select-rich-option>Option 9</ds-select-rich-option>
+              <ds-select-rich-option>Option 10</ds-select-rich-option>
+            </ds-select-rich>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <ds-select-rich name="agenziaRegionale" label="Agenzia Regionale" has-no-default-selected="" placeholder="Inserisci l'Agenzia Regionale">
+              <ds-select-rich-option>Option 1</ds-select-rich-option>
+              <ds-select-rich-option>Option 2</ds-select-rich-option>
+              <ds-select-rich-option>Option 3</ds-select-rich-option>
+              <ds-select-rich-option>Option 4</ds-select-rich-option>
+              <ds-select-rich-option>Option 5</ds-select-rich-option>
+              <ds-select-rich-option>Option 6</ds-select-rich-option>
+              <ds-select-rich-option>Option 7</ds-select-rich-option>
+              <ds-select-rich-option>Option 8</ds-select-rich-option>
+              <ds-select-rich-option>Option 9</ds-select-rich-option>
+              <ds-select-rich-option>Option 10</ds-select-rich-option>
+            </ds-select-rich>
+          </div>
+        </div>
+
+
+
+    </div>
+  </div>
+  <div class="mt-5 mb-4">
+    <ds-button type="button" class="f-left" color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+    Indietro
+  </ds-button>
+  <ds-button type="button" class="f-right" color="primary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+    Estrai dati
+  </ds-button>
+</div>
+</form>
+</div>
+ <!-- form 1 -->
+ <!-- RESULTS -->
+<div style="display: none;">
+<h3 class="ff-roboto-h3 bold text-center mt-5 mb-3">Estrazione avvenuta correttamente</h3>
+<div class="box-standard result p-4">
+<div class="row">
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">Anno di Riferimento</h5>
+    <p class="ff-roboto-body">2010</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">Agenzia Regionale</h5>
+    <p class="ff-roboto-body">Ar Lazio</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">Nome File</h5>
+    <p class="ff-roboto-body">120_2023_20230124_141544.zip</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">Dimensione file (bytes)</h5>
+    <p class="ff-roboto-body">718</p>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">File Dati Anagrafici</h5>
+    <p class="ff-roboto-body">3 Record</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">File Dati Comorbidità</h5>
+    <p class="ff-roboto-body">2 Record</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">File Dati Eventi</h5>
+    <p class="ff-roboto-body">0 Record</p>
+  </div>
+  <div class="col">
+    <h5 class="ff-roboto-h5 text-uppercase bold">Data/ora aggiornamento)</h5>
+    <p class="ff-roboto-body">19/01/2023   11:18</p>
+  </div>
+
+
+</div>
+</div>
+<div class="mt-5 mb-4">
+  <ds-button type="button" class="f-left" color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+  Indietro
+</ds-button>
+<ds-button type="button" class="f-right" color="primary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+  Esporta dati
+</ds-button>
+</div>
+</div>
+ <!-- RESULTS -->
+</div>
