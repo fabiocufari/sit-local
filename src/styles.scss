@@ -1,10 +1,13 @@
+.container{
+    &.general{
+
+        padding-left: 48px!important;
+        padding-right: 48px!important;
+    }
+}
 
 
 
-
-
-
-.ms-6{ margin-left: 48px;}
-.f-left{float: left!important;}
-.f-right{float: right!important;}
-
+.ms-6{
+    margin-left: 48px;
+}
