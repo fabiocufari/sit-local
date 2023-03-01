@@ -1,6 +1,9 @@
+@import '/src/styles.scss';
+
+
 .icon {
   position: relative;
-  background: white;
+  background: $Bianco;
   top: -22px;
   width: fit-content;
   left: 20px;
@@ -23,6 +26,6 @@
 }
 
 .border-card {
-  border: 3px solid #006dda;
+  border: 3px solid $Celtic;
   border-radius: 10px;
 }
