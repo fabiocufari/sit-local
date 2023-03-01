@@ -9,6 +9,7 @@ import { ConsultazioneEsitoAcquisizioneComponent } from './consultazione-esito-a
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { EsportazioneRegistroDializzatiComponent } from './esportazione-registro-dializzati/esportazione-registro-dializzati.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -17,7 +18,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     MainComponent,
     AcquisizioneDatiRegistroRegionaleComponent,
-    ConsultazioneEsitoAcquisizioneComponent
+    ConsultazioneEsitoAcquisizioneComponent,
+    EsportazioneRegistroDializzatiComponent
   ],
   imports: [
     CommonModule,

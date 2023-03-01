@@ -1,0 +1,8 @@
+.box-standard{
+  background-color: $Bianco;
+  width: 50%;
+  border-radius: 10px;
+  &.result{
+    width: 100%;
+  }
+}

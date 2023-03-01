@@ -1,0 +1,20 @@
+.cont {
+  height: 150px;
+}
+
+.title h5 {
+  height: 40px;
+  font-size: 16px;
+}
+
+.button {
+  float: right;
+  background-color: transparent;
+  color: #006dda;
+}
+
+.border-card {
+  border: 2px dashed #006dda;
+  border-radius: 10px;
+  background-color: #E6F0FB;
+}/*# sourceMappingURL=custom-upload.component.css.map */

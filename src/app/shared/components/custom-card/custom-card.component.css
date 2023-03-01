@@ -1,0 +1,29 @@
+.icon {
+  position: relative;
+  background: white;
+  top: -22px;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 10px;
+}
+
+.cont {
+  height: 150px;
+  inline-size: -moz-fit-content;
+  inline-size: fit-content;
+  width: 100%;
+}
+
+.title h5 {
+  height: 60px;
+}
+
+.button {
+  float: right;
+  padding-top: 8px;
+}
+
+.border-card {
+  border: 3px solid #006dda;
+  border-radius: 10px;
+}/*# sourceMappingURL=custom-card.component.css.map */
