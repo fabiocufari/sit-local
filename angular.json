@@ -38,9 +38,9 @@
               "src/assets/mds-framework/dist/css/base.min.css"
             ],
             "scripts": [
-              "src/assets/mds-framework/dist/main.bundle.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/mds-framework/dist/main.bundle.js"
 
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

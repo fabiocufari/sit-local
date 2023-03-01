@@ -15,6 +15,7 @@ import { CustomCardComponent } from './components/custom-card/custom-card.compon
 import { CustomUploadComponent } from './components/custom-upload/custom-upload.component';
 import { TitleSectionComponent } from './components/title-section/title-section.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { IconComponent } from './components/icon/icon.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CustomUploadComponent,
     TitleSectionComponent,
     SearchBoxComponent,
+    IconComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CustomUploadComponent,
     TitleSectionComponent,
     SearchBoxComponent,
+    IconComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
