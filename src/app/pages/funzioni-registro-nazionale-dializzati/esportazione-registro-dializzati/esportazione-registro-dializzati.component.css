@@ -1,0 +1,8 @@
+.box-standard {
+  background-color: #E6F0FB;
+  width: 50%;
+  border-radius: 10px;
+}
+.box-standard.result {
+  width: 100%;
+}/*# sourceMappingURL=esportazione-registro-dializzati.component.css.map */

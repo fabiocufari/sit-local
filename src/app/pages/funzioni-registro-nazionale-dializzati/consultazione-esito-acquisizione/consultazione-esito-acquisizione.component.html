@@ -6,16 +6,26 @@
 
   <!-- Tabella -->
   <div class="mt-3">
-    <ds-table no-data-message="Non ci sono dati da mostrare" pagination-type="client" [headers]="headers" [data]="data"
-     page-elements-option-label="" current-page="1" page-elements-label="Label per page"
-     page-elements-options="10,15,20,50" page-elements-default="10" caption="Tabella"
-     first-row-sticky="" first-column-sticky="" last-column-sticky="">
+    <ds-table
+    no-data-message="Non ci sono dati da mostrare"
+    pagination-type="client"
+    [headers]="headers"
+    [data]="data"
+     page-elements-option-label=""
+     current-page="1"
+     page-elements-label="Elementi per pagina"
+     page-elements-options="10,15,20,50"
+     page-elements-default="10"
+     caption="Tabella"
+     first-row-sticky=""
+     first-column-sticky=""
+     last-column-sticky="">
     </ds-table>
   </div>
   <!-- Tabella -->
   <div class="row mt-5">
     <div class="col">
-      <ds-button type="button" color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
+      <ds-button type="button" color="secondary" size="small" title="Indietro button" aria-label="Indietro" sr-text="Indietro">
       Indietro
     </ds-button>
   </div>

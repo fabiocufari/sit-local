@@ -1,0 +1,11 @@
+.icon_text {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+}
+
+.icon-center {
+  display: flex;
+  transform: translate(-10px);
+}/*# sourceMappingURL=title-section.component.css.map */

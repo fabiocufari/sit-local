@@ -1,3 +1,7 @@
+@import 'variables';
+@import '../node_modules/bootstrap-italia/src/scss/bootstrap-italia';
+
+
 .container{
     &.general{
 
@@ -11,3 +15,4 @@
 .ms-6{
     margin-left: 48px;
 }
+.form-group{margin-bottom: 0;}

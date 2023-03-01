@@ -37,7 +37,11 @@
               "src/styles.scss",
               "src/assets/mds-framework/dist/css/base.min.css"
             ],
-            "scripts": ["src/assets/mds-framework/dist/main.bundle.js"]
+            "scripts": [
+              "src/assets/mds-framework/dist/main.bundle.js",
+
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -75,10 +79,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
         "configurations": {
-            
+
             "production": {
               "browserTarget": "sid:build:production"
-              
+
             },
             "development": {
               "browserTarget": "sid:build:development"
