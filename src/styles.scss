@@ -32,6 +32,7 @@ $Cultured :#E8E9ED ;
 $Azure_x :#E9F7FB ;
 $Light_gray :#F7FAFC ;
 $Bianco: #FFFFFF;
+$Bgrey: #7c93b1;
 
 
 //Colori Messaggi
@@ -72,3 +73,8 @@ h1{
 
 h3{font-size: 20px;}
 h5{font-size: 18px;}
+.select-wrapper select{border-bottom: 1px solid $Bgrey; border-radius: 5px; border: 1px solid $Bgrey; height: 40px; font-size: 16px; font-weight: 400;}
+.select-wrapper label, .form-group label.active{line-height: 12px; position: relative;}
+
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea{border-bottom: 1px solid $Bgrey; border-radius: 5px; border: 1px solid $Bgrey; height: 40px; font-size: 16px; font-weight: 400;}
+.pt-12{padding-top: 12px;}
