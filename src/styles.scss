@@ -1,11 +1,13 @@
+//@import '../node_modules/bootstrap-italia/src/scss/bootstrap-italia';
+@import '/src/scss/bootstrap-italia-custom.scss';
 @import 'variables';
-@import '../node_modules/bootstrap-italia/src/scss/bootstrap-italia';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 //Colori Principali
 $Space :#2D3141 ;
 $Charcoal :#3E414F;
-$Black_coral :#626878; 
+$Black_coral :#626878;
 $Silver_metallic :#9EA0A7 ;
 $Spanish_gray :#B2B3B9;
 
@@ -32,7 +34,7 @@ $Light_gray :#F7FAFC ;
 $Bianco: #FFFFFF;
 
 
-//Colori Messaggi 
+//Colori Messaggi
 $Conferma :#1FA609 ;
 $Conferma_bkg :#E9F6E6 ;
 $Alert :#EDB629 ;
@@ -41,6 +43,8 @@ $Errore: #D31D38 ;
 $Errore_bkg :#FBE8EB;
 
 
+
+body{font-family: 'Roboto', sans-serif;}
 
 
 
@@ -61,3 +65,6 @@ $Errore_bkg :#FBE8EB;
 
 
 
+h1{
+    font-size: 32px;
+}

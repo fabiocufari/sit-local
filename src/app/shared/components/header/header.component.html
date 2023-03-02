@@ -2,7 +2,7 @@
 <ds-navigation-access></ds-navigation-access>
 <ds-header state="large">
   <ds-header-top-left slot="content-top-left">
-    <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
+    <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#" style="text-decoration: none;">
         {{ 'header.title' | translate }}
     </ds-link>
   </ds-header-top-left>
@@ -176,12 +176,13 @@
 
 
 
-  <div class="mt-2">
-    <ds-breadcrumb class="ms-6">
+  <div class="pt-3" class="d-flex align-items-center justify-content-start" style="padding-top: 15px;">
+    <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="azioni:criteri" class="ms-6">
+    </ds-icon-button>
+    <ds-breadcrumb class="ms-2">
       <ds-breadcrumb-item text="Centro Nazionale Trapianti" item-link="mainPage.html"></ds-breadcrumb-item>
       <ds-breadcrumb-item text="Menu Principale SIT"></ds-breadcrumb-item>
       <ds-breadcrumb-item text="Funzioni per il registro Nazionale Dializzati"></ds-breadcrumb-item>
     </ds-breadcrumb>
   </div>
-
 

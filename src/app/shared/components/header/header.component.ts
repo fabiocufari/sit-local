@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { take } from 'rxjs';
 import { ModalService } from '../modal/modal.service';
@@ -11,6 +11,8 @@ import { ModalService } from '../modal/modal.service';
 })
 export class HeaderComponent implements OnInit {
   currentLang: string='it';
+  @Input("title") title:string=''
+  @Input("icon") icon:string=''
 
   constructor(public translate : TranslateService,
               private modalService: ModalService) { }
