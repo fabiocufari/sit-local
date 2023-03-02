@@ -1,0 +1,18 @@
+// file: bootstrap-italia-custom.scss
+
+// modifica completa del template: è possibile ricompilare la libreria modificando alcune variabili SCSS
+
+// Per l'override del colore $primary della palette in formato HSB:
+
+
+$text-primary:#006DDA;
+$color-primary:#006DDA;
+$primary: #2D3141;
+$secondary: #006DDA;
+$tertiary: #3E414F;
+$quaternary: #e6f0fb80;
+
+// import libreria
+@import '../../node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss';
+
+
