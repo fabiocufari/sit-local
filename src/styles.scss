@@ -58,6 +58,7 @@ body{font-family: 'Roboto', sans-serif; font-size:18px}
         padding-right: 48px!important;
         width: 100%;
         max-width: inherit;
+        margin-top: 0;
     }
 }
 
@@ -86,7 +87,7 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
 .list-item{color: $Vivid_sky!important; }
 
-// Bottoni
+// BOTTONI
 .btn{border-radius: 4px; font-size: 16px; padding-left: 11px; padding-right: 11px; padding-top: 7px; padding-bottom: 7px;}
 .btn:hover{text-decoration: underline;}
 .btn-primary, .btn-icon{background: $Charcoal; }
@@ -98,9 +99,13 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
 .btn-secondary:hover{background: $Exlight_blue; border: 1px solid $Charcoal; color: $Charcoal;}
 
 .link-button{box-shadow: none; background: transparent; color: $Celtic;}
+
+// BREADCRUMBS
+.breadcrumb-container .breadcrumb{padding-bottom: 0;}
 .breadcrumb-container .breadcrumb .breadcrumb-item a {color: $Celtic; font-size: 16px;}
 .breadcrumb-container .breadcrumb .breadcrumb-item.active{font-size: 16px; font-weight: 400;}
 
+//FOCUS INPUT
 :focus:not(.focus--mouse), .form-check [type=checkbox]:focus + label, .form-check [type=radio]:focus + label, .toggles label input[type=checkbox]:focus + .lever{border-color: $Celtic !important;
   box-shadow: 0 0 0 1px $Celtic !important;
   outline: none !important;}
