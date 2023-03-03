@@ -7,9 +7,12 @@
 .container.general{
   padding:0px 0px!important; max-width: 100%;height: 48px; margin-top:6px ;
 
-  .avatar{background: $Vivid_sky;}
+  a.avatar{background: $Vivid_sky;
+  &:hover{opacity: 0.8;}
+  }
   .it-header-slim-wrapper-content{padding: 0;}
 }
+
 
 
 }
