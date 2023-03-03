@@ -111,3 +111,13 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
 :focus:not(.focus--mouse), .form-check [type=checkbox]:focus + label, .form-check [type=radio]:focus + label, .toggles label input[type=checkbox]:focus + .lever{border-color: $Celtic !important;
   box-shadow: 0 0 0 1px $Celtic !important;
   outline: none !important;}
+
+  .custom-arrow::after {
+    content: url('/src/assets/img/svg/chevron.svg');
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $Celtic;
+    fill: $Celtic;
+  }
