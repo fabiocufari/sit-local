@@ -97,3 +97,5 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
 .btn-secondary:hover{background: $Exlight_blue; border: 1px solid $Charcoal; color: $Charcoal;}
 
 .link-button{box-shadow: none; background: transparent; color: $Celtic;}
+.breadcrumb-container .breadcrumb .breadcrumb-item a {color: $Celtic; font-size: 16px;}
+.breadcrumb-container .breadcrumb .breadcrumb-item.active{font-size: 16px; font-weight: 400;}
