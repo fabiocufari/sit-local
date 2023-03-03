@@ -1,188 +1,71 @@
+<header class="it-header-wrapper">
+  <div class="it-header-slim-wrapper">
+    <div class="container general ">
+      <div class="row ms-0 me-0">
+        <div class="col-lg-12 p-0">
+          <div class="it-header-slim-wrapper-content">
 
-<ds-navigation-access></ds-navigation-access>
-<ds-header state="large">
-  <ds-header-top-left slot="content-top-left">
-    <ds-link aria-label="lorem link left" slot="header-link-left" color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#" style="text-decoration: none;">
-        {{ 'header.title' | translate }}
-    </ds-link>
-  </ds-header-top-left>
-  <ds-header-top-right-large slot="content-top-right">
-    <ds-link aria-label="lorem link right" slot="header-link-right" color="primary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        {{ 'header.link' | translate }}
-    </ds-link>
-
-    <ds-tooltip slot="header-tooltip-right" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
-      <ds-link slot="invoker" tabindex="0" aria-label="This is the label for screen readers tooltip" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark" sr-text="Active Language" ico-type="navigazione:chevron_down" ico-right="" ico-size="small">
-        {{currentLang | uppercase}}
-      </ds-link>
-
-      <div slot="content" class="z-index-1">
-        <ds-tooltip-content-icon>
-          <ul slot="link-list">
-            <li>
-              <ds-link (click)="changeLanguage('it')" aria-label="lorem ipsum"> IT </ds-link>
-            </li>
-            <li>
-              <ds-link (click)="changeLanguage('en')" aria-label="lorem sit"> EN </ds-link>
-            </li>
-          </ul>
-        </ds-tooltip-content-icon>
-      </div>
-    </ds-tooltip>
-
-    <ds-tooltip slot="header-avatar" has-arrow="" position="bottom" tooltip-z-index="z-index-1" interaction="click">
-      <ds-avatar class="demo-tooltip-invoker" slot="invoker" tabindex="0" aria-label="Lorem ipsum">
-        <span aria-hidden="true">MR</span>
-      </ds-avatar>
-      <ds-tooltip-content-avatar slot="content" name="Mario Rossi" description="lorem ipsum" class="z-index-1">
-        <ds-link aria-label="lorem ipsum exit" slot="link" color="secondary" mode="light" sr-text="lorem ipsum" href="#">
-          Link exit
-        </ds-link>
-      </ds-tooltip-content-avatar>
-    </ds-tooltip>
-  </ds-header-top-right-large>
-  <ds-header-login slot="header-login" ico-type="navigazione:menu" label-menu-icon="lorem ipsum">
-    <span slot="header-title">{{ 'header.header' | translate }}</span>
-    <ds-link slot="header-link-support-desktop" color="primary" mode="light" ico-type="generali:supporto"  ico-size="small">
-        {{ 'header.help' | translate }}
-    </ds-link>
-    <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="generali:supporto">
-    </ds-icon-button>
-  </ds-header-login>
-
-  <ds-navigation-menu slot="menu-navigation">
-    <ds-navigation-menu-content slot="content" name="Mario Rossi" description="lorem ipsum" ico-type="navigazione:chiudi" ico-size="medium" ico-type-mobile="navigazione:chiudi_white" ico-size-mobile="small" ico-back-size="small" ico-back-type="navigazione:freccia_left">
-      &gt;
-      <span slot="title-menu">Lorem ipsum</span>
-
-      <span slot="title-menu-back">Back</span>
-      <ds-avatar slot="avatar" type="image"> MR </ds-avatar>
-      <ds-link slot="link" aria-label="This is the label for screen link" accessible-label-when-disabled="Link disabled until previous operation done" color="secondary" mode="dark">
-        Link exit
-      </ds-link>
-      <ds-link slot="home-link" aria-label="This is the label for screen readers home" accessible-label-when-disabled="Link disabled until previous operation done" color="primary" mode="light">
-        Link 2
-      </ds-link>
-      <span slot="title-menu-mobile">Lorem ipsum et sunt nostrud.</span>
-
-      <ul slot="content-list">
-
-    <li>
-      <ds-list-item id="0">
-        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
-        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
-          Link menu level 0
-        </ds-link>
-      </ds-list-item>
-    </li>
-
-    <li>
-      <ds-list-item id="1" ico-size="small" ico-type="navigazione:freccia_right">
-        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
-        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
-          Link menu level 0
-        </ds-link>
-      </ds-list-item>
-    </li>
-
-    <li>
-      <ds-list-item has-sublevels="" id="2" ico-size="small" ico-type="navigazione:freccia_right">
-        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
-        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
-          Link menu with sublevel 0
-        </ds-link>
-      </ds-list-item>
-    </li>
-
-    <li>
-      <ds-list-item id="3" ico-size="small" ico-type="navigazione:freccia_right">
-        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
-        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
-          Link menu level 0
-        </ds-link>
-      </ds-list-item>
-    </li>
-
-    <li>
-      <ds-list-item id="4" ico-size="small" ico-type="navigazione:freccia_right">
-        <span slot="list-item-sublevels">Link menu with sublevel 0</span>
-        <ds-link slot="list-item" color="primary" mode="light" href="#" aria-label="This is the label for screen readers">
-          Link menu level 0
-        </ds-link>
-      </ds-list-item>
-    </li>
-
-      </ul>
-    </ds-navigation-menu-content>
-  </ds-navigation-menu>
-
-</ds-header>
+            <a class="d-none d-lg-block navbar-brand bold" href="#">Ente appartenenza</a>
 
 
+            <div class="nav-mobile">
+              <nav aria-label="Navigazione secondaria">
+                <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menuC1" role="button" aria-expanded="false" aria-controls="menuC1">
+                  <span>Ente appartenenza</span>
+                  <app-icon name="chevron" class="icon"></app-icon>
+                </a>
+                <div class="link-list-wrapper collapse" id="menuC1">
+                  <ul class="link-list">
+                    <li><a class="list-item" href="#">Link 1</a></li>
 
-<!-- <div class="it-header-slim-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
-          <div class="nav-mobile">
-            <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
-                <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true">
-                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
-              </a>
-              <div class="link-list-wrapper collapse" id="menu1a">
-                <ul class="link-list">
-                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
-                  <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="it-header-slim-right-zone">
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
-                <span>ITA</span>
-                <svg class="icon d-none d-lg-block">
-                  <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
-                </svg>
-              </a>
-              <div class="dropdown-menu">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
-                        <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
-                      </ul>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="it-header-slim-right-zone">
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
+                  <span>ITA</span>
+                  <svg class="icon d-none d-lg-block">
+                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-expand"></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="link-list-wrapper">
+                        <ul class="link-list">
+                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
+                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+                <div class="avatar  bold size-lg">
+                  <p aria-hidden="true" class="text-primary">MR</p>
+                  <span class="visually-hidden">Mario Rossi</span>
+                </div>
             </div>
-            <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
-            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
-
-
-
-  <div class="pt-3" class="d-flex align-items-center justify-content-start" style="padding-top: 15px;">
-    <ds-icon-button aria-label="lorem ipsum" slot="header-link-support-mobile" ico-right-p0="" ico-left-p0="" p0="" ico-size="small" ico-type="azioni:criteri" class="ms-6">
-    </ds-icon-button>
-    <ds-breadcrumb class="ms-2">
-      <ds-breadcrumb-item text="Centro Nazionale Trapianti" item-link="mainPage.html"></ds-breadcrumb-item>
-      <ds-breadcrumb-item text="Menu Principale SIT"></ds-breadcrumb-item>
-      <ds-breadcrumb-item text="Funzioni per il registro Nazionale Dializzati"></ds-breadcrumb-item>
-    </ds-breadcrumb>
+<div class="underheader">
+  <div class="row">
+  <div class="col d-flex align-items-center">
+  <app-icon name="burger" class="burger"></app-icon>
+  <h4 class="title-site mb-0 ms-2">Sitema Informativo Trapianti</h4>
+</div>
+<div class="col  d-flex align-items-center justify-content-end">
+   <a href="#" class="help-link">Link 1</a>
   </div>
+</div>
+</div>
 
+</header>

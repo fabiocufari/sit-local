@@ -7,10 +7,13 @@
       <h5 class="mb-2 ps-3 bold text-primary">{{title}}</h5>
     </div>
     <div class="button">
-      <ds-button type="button" color="primary" size="small" title="Click the button" [routerLink]="link"
-        aria-label="This is the label for screen readers" ico-type="navigazione:freccia_right" ico-right="">
-        Entra
-      </ds-button>
+
+
+      <button class="btn btn-secondary btn-xs btn-icon ms-1" [routerLink]="link">
+        <span class="text-uppercase">Entra</span>
+        <app-icon name="chevronDx" class="chevron icon-white ms-4"></app-icon>
+      </button>
+
     </div>
   </div>
 </div>
