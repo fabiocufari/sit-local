@@ -33,6 +33,8 @@ $Azure_x :#E9F7FB ;
 $Light_gray :#F7FAFC ;
 $Bianco: #FFFFFF;
 $Bgrey: #7c93b1;
+$light_blue:rgba(230,240,251,0.5);
+$Exlight_blue: #f7fbfc;
 
 
 //Colori Messaggi
@@ -45,7 +47,7 @@ $Errore_bkg :#FBE8EB;
 
 
 
-body{font-family: 'Roboto', sans-serif;}
+body{font-family: 'Roboto', sans-serif; font-size:18px}
 
 
 
@@ -54,6 +56,9 @@ body{font-family: 'Roboto', sans-serif;}
 
         padding-left: 48px!important;
         padding-right: 48px!important;
+        width: 100%;
+        max-width: inherit;
+        margin-top: 0;
     }
 }
 
@@ -71,10 +76,48 @@ h1{
     margin-bottom: 0;
 }
 
-h3{font-size: 20px;}
+h1{font-size: 32px;}
+h2{font-size: 28px; padding-bottom: 0; margin-bottom: 0;}
+h3{font-size: 24px;}
+h4{font-size: 20px;}
 h5{font-size: 18px;}
 .select-wrapper select{border-bottom: 1px solid $Bgrey; border-radius: 5px; border: 1px solid $Bgrey; height: 40px; font-size: 16px; font-weight: 400;}
 .select-wrapper label, .form-group label.active{line-height: 12px; position: relative;}
 
 input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea{border-bottom: 1px solid $Bgrey; border-radius: 5px; border: 1px solid $Bgrey; height: 40px; font-size: 16px; font-weight: 400;}
 .pt-12{padding-top: 12px;}
+a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
+.list-item{color: $Vivid_sky!important; }
+
+// BOTTONI
+.btn{border-radius: 4px; font-size: 16px; padding-left: 11px; padding-right: 11px; padding-top: 7px; padding-bottom: 7px;}
+.btn:hover{text-decoration: underline;}
+.btn-primary, .btn-icon{background: $Charcoal; }
+.btn-primary:hover, .btn-icon:hover{background: $Black_coral; }
+.chevron{width: 20px; height: 20px;}
+.btn-primary.disabled, .btn-icon.disabled{ background: $Cultured; border:1px solid $Spanish_gray; color: $Black_coral;}
+
+.btn-secondary{background: transparent; border: 1px solid $Charcoal; color: $Charcoal;}
+.btn-secondary:hover{background: $Exlight_blue; border: 1px solid $Charcoal; color: $Charcoal;}
+
+.link-button{box-shadow: none; background: transparent; color: $Celtic;}
+
+// BREADCRUMBS
+.breadcrumb-container .breadcrumb{padding-bottom: 0;}
+.breadcrumb-container .breadcrumb .breadcrumb-item a {color: $Celtic; font-size: 16px;}
+.breadcrumb-container .breadcrumb .breadcrumb-item.active{font-size: 16px; font-weight: 400;}
+
+//FOCUS INPUT
+:focus:not(.focus--mouse), .form-check [type=checkbox]:focus + label, .form-check [type=radio]:focus + label, .toggles label input[type=checkbox]:focus + .lever{border-color: $Celtic !important;
+  box-shadow: 0 0 0 1px $Celtic !important;
+  outline: none !important;}
+
+  .custom-arrow::after {
+    content: url('/src/assets/img/svg/chevron.svg');
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $Celtic;
+    fill: $Celtic;
+  }

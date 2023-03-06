@@ -1,162 +1,51 @@
-<ds-footer state="large">
-  <!-- heading logo -->
-  <figure slot="logo-1">
-    <img src="https://i.ibb.co/HzXCpp1/ministero-della-salute.png" aria-label="logo" alt="logo-1">
-  </figure>
-  <figure slot="logo-2">
-    <img src="https://i.ibb.co/G3wTTmy/UE.png" aria-label="logo" alt="logo-2">
-  </figure>
-  <figure slot="logo-3">
-    <img src="https://i.ibb.co/YNXZS1G/italiadomani.png" aria-label="logo" alt="logo-3">
-  </figure>
-  <!-- SMALL -->
-  <!-- heading right -->
-  <div slot="heading-small-right-link">
-    <ds-link mode="dark" color="secondary" sr-text="link esterno apre nuova scheda" href="#">Link footer 1</ds-link>
+<footer style="background-color: #2D3141; height: 370px;">
+  <div class="container py-4">
+    <div class="row d-flex align-items-start">
+      <div class="col-md-4 maxw-30 d-flex">
+        <figure slot="logo-1">
+          <img src="https://i.ibb.co/HzXCpp1/ministero-della-salute.png" aria-label="logo" alt="logo-1" height="60">
+        </figure>
+        <figure slot="logo-2">
+          <img src="https://i.ibb.co/G3wTTmy/UE.png" aria-label="logo" alt="logo-2" height="60">
+        </figure>
+        <figure slot="logo-3">
+          <img src="https://i.ibb.co/YNXZS1G/italiadomani.png" aria-label="logo" alt="logo-3" height="60">
+        </figure>
+      </div>
+      <hr style="border-top: 1px solid #49CFFA; margin: 0; width: 100%;" class="pt-2 pb-2">
+      <div class="col-md-4 maxw-30" style="max-width: 33%">
+        <h4 class="text-white">Sezione 1</h4>
+        <ul class="list-unstyled quick-links">
+          <li><a href="#" class="footer-link">Link 1.1</a></li>
+          <li><a href="#" class="footer-link">Link 1.2</a></li>
+          <li><a href="#" class="footer-link">Link 1.3</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 maxw-30 d-flex flex-column align-items-center" style="max-width: 33%">
+        <h4 class="" style="color: #2D3141;">.</h4>
+        <ul class="list-unstyled quick-links">
+          <li><a href="#" class="footer-link">Link 2.1</a></li>
+          <li><a href="#" class="footer-link">Link 2.2</a></li>
+          <li><a href="#" class="footer-link">Link 2.3</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 maxw-30 d-flex flex-column align-items-end pb-5" style="max-width: 33%">
+        <h4 class="text-white">Sezione 3</h4>
+        <ul class="list-unstyled quick-links">
+          <li><a href="#" class="footer-link">Link 3.1</a></li>
+          <li><a href="#" class="footer-link">Link 3.2</a></li>
+          <li><a href="#" class="footer-link">Link 3.3</a></li>
+        </ul>
+      </div>
+      <div class="col-md-7 maxw-70 pt-2">
+        <ul class="list-unstyled quick-links d-flex ">
+          <li><a href="#" class="text-white pr-3 ">Cookie Policy</a></li>
+          <li><a href="#" class="text-white p-3 ">Termini d'uso</a></li>
+          <li><a href="#" class="text-white p-3 ">Note legali</a></li>
+          <li><a href="#" class="text-white p-3 ">Accessibilità</a></li>
+          <li><a href="#" class="text-white p-3 ">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <!-- footer -->
-  <div slot="footer-small-content">
-    <ds-footer-link-list>
-      <ul slot="link-list" role="list" aria-label="lorem ipsum sit" class="">
-
-    <li id="0">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Link 1
-      </ds-link>
-    </li>
-
-    <li id="1">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Link 2
-      </ds-link>
-    </li>
-
-      </ul>
-    </ds-footer-link-list>
-  </div>
-
-  <!-- LARGE -->
-  <!-- main-content-left -->
-  <div slot="title-left">Contatti</div>
-  <div slot="main-content-left-column-left">
-    <ds-footer-link-list>
-      <ul slot="link-list" class="ps-0 ms-0" >
-
-    <li id="column-left-link-0">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Telefono e posta elettronica
-      </ds-link>
-    </li>
-
-    <li id="column-left-link-1">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        PEC
-      </ds-link>
-    </li>
-
-    <li id="column-left-link-2">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Uffici periferici territoriali
-      </ds-link>
-    </li>
-
-      </ul>
-    </ds-footer-link-list>
-  </div>
-  <div slot="main-content-left-column-right">
-    <ds-footer-link-list>
-      <ul slot="link-list">
-
-    <li id="column-right-link-0">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        URP
-      </ds-link>
-    </li>
-
-    <li id="column-right-link-1">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Front Office
-      </ds-link>
-    </li>
-
-    <li id="column-right-link-2">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Ufficio Stampa
-      </ds-link>
-    </li>
-
-      </ul>
-    </ds-footer-link-list>
-  </div>
-  <!-- main-content-right -->
-  <div slot="title-right">Link Utili</div>
-  <div slot="main-content-right">
-    <ds-footer-link-list>
-      <ul slot="link-list">
-
-    <li id="content-right-link-0">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link" >
-        Link 1
-      </ds-link>
-    </li>
-
-    <li id="content-right-link-1">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Link 2
-      </ds-link>
-    </li>
-
-    <li id="content-right-link-2">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Link 3
-      </ds-link>
-    </li>
-
-    <li id="content-right-link-3">
-      <ds-link  mode="dark" sr-text="link esterno apre nuova scheda" href="#" class="footer-link">
-        Link 4
-      </ds-link>
-    </li>
-
-      </ul>
-    </ds-footer-link-list>
-  </div>
-  <!-- footer links -->
-  <div slot="footer-content">
-    <ds-footer-link-list has-horizontal="">
-      <ul slot="link-list" role="list" aria-label="lorem ipsum sit" class="horizontal-md">
-
-    <li id="list-7robc8lhwu">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Privacy policy
-      </ds-link>
-    </li>
-
-    <li id="list-izl3liai2u">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Cookie policy
-      </ds-link>
-    </li>
-
-    <li id="list-gwtqw8cb45">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Termini d'uso
-      </ds-link>
-    </li>
-
-    <li id="list-4i06dql5x1">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-         Note legali
-      </ds-link>
-    </li>
-
-    <li id="list-whttpye8hl">
-      <ds-link color="secondary" mode="dark" sr-text="Link esterno apre nuova scheda" href="#">
-        Accesibilità
-      </ds-link>
-    </li>
-
-      </ul>
-    </ds-footer-link-list>
-  </div>
-</ds-footer>
+</footer>    

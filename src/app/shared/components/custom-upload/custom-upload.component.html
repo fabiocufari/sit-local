@@ -1,16 +1,19 @@
 <div class="border-card">
     <div class="p-3 cont" >
       <div class="title">
-        <h5 class="mb-2  ff-roboto-body-w900 ff-roboto-h5">{{title}}</h5>
+        <h5 class="mb-2 bold">{{title}}</h5>
       </div>
-      <div class="mb-2 ff-roboto-body">
-        nessun file selezionato
+      <div class="mb-2">
+        <span >nessun file selezionato</span>
       </div>
 
       <div class="button">
-        <ds-link aria-label="This is the label for screen readers" color="primary" mode="light" title="Click the link" ico-type="azioni:download" href="#" active="" sr-text="Lorem ipsum">
+        <button type="button" class="btn link-button">
+        <app-icon name="upload" class="ico-upload"></app-icon>
           Scegli file
-        </ds-link>
+        </button>
+
+
 
 
       </div>
