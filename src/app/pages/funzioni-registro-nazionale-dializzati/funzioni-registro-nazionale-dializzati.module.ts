@@ -1,6 +1,5 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FunzioniRegistroNazionaleDializzatiRoutingModule } from './funzioni-registro-nazionale-dializzati-routing.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -27,7 +26,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TranslateModule,
     FunzioniRegistroNazionaleDializzatiRoutingModule
   ],
-  schemas : [CUSTOM_ELEMENTS_SCHEMA],
+  schemas : [],
   exports :[TranslateModule]
 })
 export class FunzioniRegistroNazionaleDializzatiModule { }
