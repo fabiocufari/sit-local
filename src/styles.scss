@@ -40,6 +40,7 @@ $Bgrey: #7c93b1;
 $light_blue:rgba(230,240,251,0.5);
 $Exlight_blue: #f7fbfc;
 $Exlight_gray: #D7E0EA;
+$Exlight_azure: #F2F7FD;
 
 
 //Colori Messaggi
@@ -100,7 +101,7 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
 .btn-primary, .btn-icon{background: $Charcoal; }
 .btn-primary:hover, .btn-icon:hover{background: $Black_coral; }
 .chevron{width: 20px; height: 20px;}
-.btn-primary.disabled, .btn-icon.disabled{ background: $Cultured; border:1px solid $Spanish_gray; color: $Black_coral;}
+.btn-primary.disabled, .btn-icon.disabled, btn-{ background: $Cultured; border:1px solid $Spanish_gray; color: $Black_coral;}
 
 .btn-secondary{background: transparent; border: 1px solid $Charcoal; color: $Charcoal;}
 .btn-secondary:hover{background: $Exlight_blue; border: 1px solid $Charcoal; color: $Charcoal;}
