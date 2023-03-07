@@ -127,19 +127,4 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
     fill: $Celtic;
   }
 
-  .table-striped > tbody > tr:nth-of-type(odd) > *{background-color: $Beau; border: none;}
-  .table > :not(caption) > * > *{border: none; box-shadow:none}
-  .table th {font-size: 14px;}
-  .table td {font-size: 16px; position: relative;}
-
-  .table td::after {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    height: 30px;
-    transform: translateY(-50%);
-    border-right: 1px solid $Exlight_gray;
-    content: "";
-  }
-
-  .table tr td:last-child::after{border-right:none}
+.mt-12{margin-top: 12px;}

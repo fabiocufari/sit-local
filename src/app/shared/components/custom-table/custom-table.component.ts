@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-table',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./custom-table.component.scss']
 })
 export class CustomTableComponent {
+  @Input() headers: any[] = [];
+  @Input() data: any[] = [];
+
+
 
 }

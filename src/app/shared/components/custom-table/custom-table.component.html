@@ -1,8 +1,22 @@
+<div class="row mt-3">
+  <div class="col">
+  <div class="select-wrapper  justify-content-start">
+    <label for="defaultSelect">Elementi per pagina</label>
+    <select id="defaultSelect" class="form-select element-page">
+      <option selected="" value="">10</option>
+      <option value="Value 1">20</option>
+      <option value="Value 2">30</option>
+      <option value="Value 3">40</option>
+      <option value="Value 4">50</option>
+    </select>
+  </div>
+</div>
+<div class="col">
 <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
   <ul class="pagination">
     <li class="page-item disabled">
       <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <svg class="icon icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-left"></use></svg>
+        <app-icon class="icon icon-secondary" name="chevronSx"></app-icon>
         <span class="visually-hidden">Pagina precedente</span>
       </a>
     </li>
@@ -16,38 +30,36 @@
     <li class="page-item">
       <a class="page-link" href="#">
         <span class="visually-hidden">Pagina successiva</span>
-        <svg class="icon icon-primary"><use href="/bootstrap-italia/dist/svg/sprites.svg#it-chevron-right"></use></svg>
+        <app-icon class="icon icon-secondary" name="chevronDx"></app-icon>
       </a>
     </li>
   </ul>
 </nav>
+</div>
+</div>
+<div class="row">
+  <div class="col">
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Cognome</th>
-      <th scope="col">Username</th>
+    <tr >
+      <th *ngFor="let head of headers">{{head.head}}</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td scope="row">1</td>
-      <td>Mario</td>
-      <td>Verdi</td>
-      <td>mario.verdi</td>
+    <tr *ngFor="let item of data">
+      <td>{{item.agenzia}}</td>
+      <td>{{item.data}}</td>
+      <td>{{item.tipo}}</td>
+      <td class="text-end">{{item.totInviati}}</td>
+      <td class="text-end">{{item.totElaborati}}</td>
+      <td class="text-end">{{item.totScartati}}</td>
+      <td class="text-end">{{item.totDisaAnagr}}</td>
+      <td><a href="#">{{item.fileInviato}}</a></td>
+      <td><a href="#">{{item.fileEsito}}</a></td>
     </tr>
-    <tr>
-      <td scope="row">2</td>
-      <td>Francesco</td>
-      <td>Bianchi</td>
-      <td>francesco.bianchi</td>
-    </tr>
-    <tr>
-      <td scope="row">3</td>
-      <td>Alessandro</td>
-      <td>Rossi</td>
-      <td>alessandro.rossi</td>
-    </tr>
+
   </tbody>
 </table>
+</div>
+</div>

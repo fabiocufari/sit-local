@@ -194,6 +194,28 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
 
   constructor() { }
 
+  headers = [
+    {head:'Agenzia'},
+    {head:'Data/ora invio'},
+    {head:'Tipo di file'},
+    {head:'Totale inviati'},
+    {head:'Totale elaborati'},
+    {head:'Totale Scartati'},
+    {head:'Totale Disall Anagr'},
+    {head:'File inviato'},
+    {head:'File esito'},
+  ]
+
+  data = [
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+  ]
+
   ngOnInit(): void {
 
   }
