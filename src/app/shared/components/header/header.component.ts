@@ -20,10 +20,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   
     this.currentLang=this.translate.defaultLang
-   /*  this.modalService.display(true,"Prova")
-    this.modalService.response.pipe(take(2)).subscribe( res => {
-      console.log(res)
-    }) */
+  
   }
 
   changeLanguage(lang:string){

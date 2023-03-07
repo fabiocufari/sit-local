@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 {
   path: 'funzioni-registro-nazionale-dializzati',
-  loadChildren: () => import('./pages/funzioni-registro-nazionale-dializzati/funzioni-registro-nazionale-dializzati.module').then(m => m.FunzioniRegistroNazionaleDializzatiModule)
+  loadChildren: () => import('./pages/funzioni-registro-nazionale-dializzati/funzioni-registro-nazionale-dializzati.module').then(m => m.FunzioniRegistroNazionaleDializzatiModule),
+   data: { breadcrumb: 'Funzioni per il Registro Nazionale Dializzati', level: 1 }
 },
 {
   path: 'dichiarazioni-di-volonta',

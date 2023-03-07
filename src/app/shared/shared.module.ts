@@ -19,6 +19,7 @@ import { IconComponent } from './components/icon/icon.component';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TooltipDirective } from './directive/tooltip.directive';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -36,13 +37,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     IconComponent,
     CustomTableComponent,
     TooltipDirective,
+    BreadcrumbComponent,
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-  TranslateModule
+    TranslateModule
   ],
   exports: [
     HeaderComponent,

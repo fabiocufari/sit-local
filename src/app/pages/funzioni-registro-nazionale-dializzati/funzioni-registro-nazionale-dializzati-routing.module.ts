@@ -8,19 +8,19 @@ import { EsportazioneRegistroDializzatiComponent } from './esportazione-registro
 const routes: Routes = [
   {
     path: 'acquisizione-dati-registro-regionale',
-    component: AcquisizioneDatiRegistroRegionaleComponent
+    component: AcquisizioneDatiRegistroRegionaleComponent, data: { breadcrumb: 'Acquisizione dati Registro Regionale', level: 2 } 
   },
   {
   path: 'consultazione-esito-acquisizione',
-  component: ConsultazioneEsitoAcquisizioneComponent
+  component: ConsultazioneEsitoAcquisizioneComponent, data: { breadcrumb: 'Consultazione Esito Acquisizione', level: 2 } 
   },
   {
   path: 'esportazione-registro-dializzati',
-  component: EsportazioneRegistroDializzatiComponent
+  component: EsportazioneRegistroDializzatiComponent, data: { breadcrumb: 'Esportazione Dati Registro Dializzati', level: 2 } 
   },
   {
   path: '',
-  component: MainComponent
+  component: MainComponent, data: { breadcrumb: 'Navigazione', level: 2 } 
   },
 ];
 
