@@ -11,7 +11,7 @@ export class ModalService {
     display(value: boolean,title:string) {
      
         this.title=title
-        this.status.next({"status":value});
+        this.status.next(value);
        
     }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { pipe, take } from 'rxjs';
 import { colType } from 'src/app/shared/components/custom-table/colType.enum';
 import { ModalService } from 'src/app/shared/components/modal/modal.service';
 
@@ -47,7 +48,11 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
   clickEvent(e: any){
     console.log(e)
     this.clickInfo={id: e.id,action :e.action}
-    this.modal.display(true,'titolo')
+    this.modal.display(true,'titolo '+e.action)
+    this.modal.response.pipe(take(2)).subscribe(x=>{
+      this.modal.display(false,'titolo')
+      console.log(x)
+    })
 
   
   }

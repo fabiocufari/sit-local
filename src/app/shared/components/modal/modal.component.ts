@@ -24,11 +24,18 @@ export class ModalComponent implements OnInit,AfterViewInit{
 
     this.modalService.status.subscribe((val: boolean) => {
      
-      if (this.modal) {  this.myModal.show() }
+      if (this.modal) {  
+        if(val){
+          this.modalService.setResponse('')
+        this.myModal.show() 
+        this.title=this.modalService.title
+      }
+        else {
+          this.myModal.hide() 
+
+      }
+      }
      
-      console.log(val)
-     
-      this.title=this.modalService.title
       
     });
   }
@@ -37,10 +44,12 @@ export class ModalComponent implements OnInit,AfterViewInit{
       this.myModal = new bootstrap.Modal('#modal', {
         keyboard: false,
       })
+
     }
  }
   onClose(e: any){
-    this.modalService.setResponse(this.response)
+    
+    this.modalService.setResponse('close')
   }
 
 }
