@@ -1,21 +1,48 @@
 @import '/src/styles.scss';
 
-.table-striped > tbody > tr:nth-of-type(odd) > *{background-color: $Beau; border: none;}
-  .table > :not(caption) > * > *{border: none; box-shadow:none}
-  .table th {font-size: 14px;}
-  .table td {font-size: 16px; position: relative; font-weight: 400;}
-  .table td a{font-weight: 400;}
-  .table td::after {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    height: 30px;
-    transform: translateY(-50%);
-    border-right: 1px solid $Exlight_gray;
-    content: "";
-  }
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  background-color: $Beau;
+  border: none;
+}
 
-  .table tr td:last-child::after{border-right:none}
- .icon{width: 20px; height: 20px;}
+.table> :not(caption)>*>* {
+  border: none;
+  box-shadow: none
+}
 
- select.element-page{width: 60px!important;}
+.table th {
+  font-size: 14px;
+}
+
+.table td {
+  font-size: 16px;
+  position: relative;
+  font-weight: 400;
+}
+
+.table td a {
+  font-weight: 400;
+}
+
+.table td::after {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  height: 30px;
+  transform: translateY(-50%);
+  border-right: 1px solid $Exlight_gray;
+  content: "";
+}
+
+.table tr td:last-child::after {
+  border-right: none
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+select.element-page {
+  width: 60px !important;
+}
