@@ -39,6 +39,7 @@
 </div>
 <div class="row">
   <div class="col">
+
     <table class="table table-striped">
       <thead>
         <tr>
@@ -48,6 +49,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of data ;let rowNum = index">
+          
           <ng-container *ngFor="let col of item; let colNum = index">
 
             <td *ngIf="headers[colNum].type==colType.string" class="typeString">{{col}}</td>
@@ -58,11 +60,12 @@
                 [routerLink]="col.link">{{col.title}}</a></td>
 
             <td *ngIf="headers[colNum].type==colType.button" class="typeButton">
-
-              <button *ngFor="let button of col" type="button" [class]="button.action"
-                (click)="buttonClick(rowNum,button.action)" data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title">
+              <ng-container *ngFor="let button of col">
+                <button type="button" [class]="button.action" (click)="buttonClick(rowNum,button.action)"
+                  data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title">
                   <app-icon class="icon icon-secondary" [name]="button.icon"></app-icon>
-                  </button>
+                </button>
+              </ng-container>
             </td>
 
             <td *ngIf="headers[colNum].type==colType.icon" class="typeNumber text-center">icon {{col}}</td>
