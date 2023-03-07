@@ -60,12 +60,12 @@
             <td *ngIf="headers[colNum].type==colType.button" class="typeButton">
 
               <button *ngFor="let button of col" type="button" [class]="button.action"
-                (click)="buttonClick(rowNum,button.action)" data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title"> 
+                (click)="buttonClick(rowNum,button.action)" data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title">
                   <app-icon class="icon icon-secondary" [name]="button.icon"></app-icon>
                   </button>
             </td>
 
-            <td *ngIf="headers[colNum].type==colType.icon" class="typeNumber text-end">icon {{col}}</td>
+            <td *ngIf="headers[colNum].type==colType.icon" class="typeNumber text-center">icon {{col}}</td>
           </ng-container>
         </tr>
 

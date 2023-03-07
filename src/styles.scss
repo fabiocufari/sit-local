@@ -85,7 +85,7 @@ h1{font-size: 32px;}
 h2{font-size: 28px; padding-bottom: 0; margin-bottom: 0;}
 h3{font-size: 24px;}
 h4{font-size: 20px;}
-h5{font-size: 18px;}
+h5{font-size: 18px; padding-bottom: 0; margin-bottom: 0;}
 .select-wrapper select{border-bottom: 1px solid $Bgrey; border-radius: 5px; border: 1px solid $Bgrey; height: 40px; font-size: 16px; font-weight: 400;}
 .select-wrapper label, .form-group label.active{line-height: 12px; position: relative;}
 
@@ -128,6 +128,9 @@ a{font-weight: 700; color: $Celtic; text-decoration: underline!important;}
   }
 
 .mt-12{margin-top: 12px;}
+.section-form{
+  background-color: $Beau; padding: 8px; padding-left: 15px; border-radius: 5px;
+  h5{line-height: 20px;}
+}
 
-/* Importing Bootstrap SCSS file. */
-
+input.form-control::placeholder{font-weight: 400; font-style: italic;}
