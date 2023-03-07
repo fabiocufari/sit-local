@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import { colType } from 'src/app/shared/components/custom-table/colType.enum';
 @Component({
   selector: 'app-consultazione-esito-acquisizione',
   templateUrl: './consultazione-esito-acquisizione.component.html',
   styleUrls: ['./consultazione-esito-acquisizione.component.scss']
 })
 export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
+  clickInfo: any;
 
   //Headers della tabella
   // headers: any[] = [
@@ -195,28 +196,38 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
   constructor() { }
 
   headers = [
-    {head:'Agenzia'},
-    {head:'Data/ora invio'},
-    {head:'Tipo di file'},
-    {head:'Totale inviati'},
-    {head:'Totale elaborati'},
-    {head:'Totale Scartati'},
-    {head:'Totale Disall Anagr'},
-    {head:'File inviato'},
-    {head:'File esito'},
+    {head:'Agenzia',type:colType.string},
+    {head:'Data/ora invio',type:colType.string},
+    {head:'Tipo di file',type:colType.string},
+    {head:'Totale inviati',type:colType.number},
+    {head:'Totale elaborati',type:colType.number},
+    {head:'Totale Scartati',type:colType.number},
+    {head:'Totale Disall Anagr',type:colType.number},
+    {head:'File inviato',type:colType.downloadLink},
+    {head:'File esito',type:colType.downloadLink},
+    {head:'Button Test',type:colType.button},
   ]
+
 
   data = [
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
-    {agenzia: 'Lazio', data: '30/09/2023 18:45', tipo: 'Anagrafe', totInviati: 1, totElaborati: 3, totScartati: 2, totDisaAnagr: 2, fileInviato: 'FileAnagrafica.txt', fileEsito: '120_A_2023_20230124_141544.txt'},
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+  
+   
   ]
 
+  
   ngOnInit(): void {
+
+  }
+
+  clickEvent(e: any){
+    console.log(e)
+    this.clickInfo={id: e.id,action :e.action}
 
   }
 

@@ -1,65 +1,65 @@
 <div class="row mt-3">
   <div class="col">
-  <div class="select-wrapper  justify-content-start">
-    <label for="defaultSelect">Elementi per pagina</label>
-    <select id="defaultSelect" class="form-select element-page">
-      <option selected="" value="">10</option>
-      <option value="Value 1">20</option>
-      <option value="Value 2">30</option>
-      <option value="Value 3">40</option>
-      <option value="Value 4">50</option>
-    </select>
+    <div class="select-wrapper  justify-content-start">
+      <label for="defaultSelect">Elementi per pagina</label>
+      <select id="defaultSelect" class="form-select element-page">
+        <option selected="" value="">10</option>
+        <option value="Value 1">20</option>
+        <option value="Value 2">30</option>
+        <option value="Value 3">40</option>
+        <option value="Value 4">50</option>
+      </select>
+    </div>
   </div>
-</div>
-<div class="col">
-<nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
-        <app-icon class="icon icon-secondary" name="chevronSx"></app-icon>
-        <span class="visually-hidden">Pagina precedente</span>
-      </a>
-    </li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-current="page">
-        <span class="d-inline-block d-sm-none">Pagina </span>1
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">
-        <span class="visually-hidden">Pagina successiva</span>
-        <app-icon class="icon icon-secondary" name="chevronDx"></app-icon>
-      </a>
-    </li>
-  </ul>
-</nav>
-</div>
+  <div class="col">
+    <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
+            <app-icon class="icon icon-secondary" name="chevronSx"></app-icon>
+            <span class="visually-hidden">Pagina precedente</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-current="page">
+            <span class="d-inline-block d-sm-none">Pagina </span>1
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">
+            <span class="visually-hidden">Pagina successiva</span>
+            <app-icon class="icon icon-secondary" name="chevronDx"></app-icon>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 <div class="row">
   <div class="col">
-<table class="table table-striped">
-  <thead>
-    <tr >
-      <th *ngFor="let head of headers">{{head.head}}</th>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th *ngFor="let head of headers">{{head.head}}</th>
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of data">
-      <td>{{item.agenzia}}</td>
-      <td>{{item.data}}</td>
-      <td>{{item.tipo}}</td>
-      <td class="text-end">{{item.totInviati}}</td>
-      <td class="text-end">{{item.totElaborati}}</td>
-      <td class="text-end">{{item.totScartati}}</td>
-      <td class="text-end">{{item.totDisaAnagr}}</td>
-      <td><a href="#">{{item.fileInviato}}</a></td>
-      <td><a href="#">{{item.fileEsito}}</a></td>
-    </tr>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data ;let rowNum = index">
+          <ng-container *ngFor="let col of item; let colNum = index">
+           
+            <td *ngIf="headers[colNum].type==colType.string" class="typeString">{{col}}</td>
+            <td *ngIf="headers[colNum].type==colType.number" class="typeNumber text-end">{{col}}</td>
+            <td *ngIf="headers[colNum].type==colType.downloadLink" class="typeDownloadLink" ><a [routerLink]="col.link">{{col.title}}</a></td>
+            <td *ngIf="headers[colNum].type==colType.button" class="typeButton" >
+              <button type="button" [class]="col.action" (click)="buttonClick(rowNum,col.action)"><app-icon class="icon icon-secondary" [name]="col.icon"></app-icon> {{col.title}}</button>
+            </td>
+          </ng-container>
+        </tr>
 
-  </tbody>
-</table>
-</div>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -6,17 +6,18 @@
 
   <!-- Tabella -->
   <div class=" mt-4">
-    <app-custom-table [data]="data" [headers]="headers"></app-custom-table>
+    <app-custom-table [data]="data" [headers]="headers" (clickEvent)="clickEvent($event)"></app-custom-table>
+    {{clickInfo | json}}
   </div>
   <!-- Tabella -->
   <div class="row mt-5">
     <div class="col">
       <button class="btn btn-secondary btn-dx btn-icon mt-2 ps-3 pe-3">
         <span class="text-uppercase ">Indietro</span>
-    </button>
+      </button>
 
+    </div>
+    <div class="col d-flex justify-content-end">
+    </div>
   </div>
-  <div class="col d-flex justify-content-end">
-  </div>
-  </div>
-  </div>
+</div>
