@@ -26,14 +26,12 @@ export class BreadcrumbComponent {
       const childrenRoutes = currentRoute.children;
       currentRoute = null;
       childrenRoutes.forEach((route: { outlet: string; snapshot: any; }) => {
-        console.log(route)
         if (route.outlet === 'primary') {
           const routeSnapshot = route.snapshot;
           url += '/' + routeSnapshot.url.map((segment: { path: any; }) => segment.path).join('/');
           this.currentUrl = url;
           
           if (routeSnapshot.data.breadcrumb && routeSnapshot.data.level) {
-            console.log(routeSnapshot.data.breadcrumb)
             this.breadcrumbList.push({
               label: routeSnapshot.data.breadcrumb,
               level: routeSnapshot.data.level,
