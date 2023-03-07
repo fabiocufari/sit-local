@@ -9,6 +9,7 @@ export class ModalService {
   public status: BehaviorSubject<any> = new BehaviorSubject<any>(false);
   public response: BehaviorSubject<any> = new BehaviorSubject<any>('');
     display(value: boolean,title:string) {
+     
         this.title=title
         this.status.next({"status":value});
        

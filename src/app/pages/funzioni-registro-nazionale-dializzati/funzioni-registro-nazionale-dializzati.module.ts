@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { EsportazioneRegistroDializzatiComponent } from './esportazione-registro-dializzati/esportazione-registro-dializzati.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FunzioniRegistroNazionaleDializzatiRoutingModule
   ],
   schemas : [],
-  exports :[TranslateModule]
+  exports :[TranslateModule],
+ 
 })
 export class FunzioniRegistroNazionaleDializzatiModule { }

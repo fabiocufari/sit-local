@@ -5,6 +5,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoaderService } from './shared/components/loader/loader.service';
+import { ModalService } from './shared/components/modal/modal.service';
 import { SharedModule } from "./shared/shared.module";
 
 
@@ -15,7 +17,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     declarations: [
         AppComponent,
     ],
-    providers: [],
+    providers: [
+        LoaderService,
+        ModalService
+      ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -30,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
           },
           defaultLanguage: 'it'}),
 
-    ]
+    ],
+    
 })
 export class AppModule { }

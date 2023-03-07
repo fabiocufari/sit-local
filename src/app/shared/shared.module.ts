@@ -57,9 +57,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     CustomTableComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [
-    LoaderService,
-    ModalService
-  ],
+  
 })
 export class SharedModule { }

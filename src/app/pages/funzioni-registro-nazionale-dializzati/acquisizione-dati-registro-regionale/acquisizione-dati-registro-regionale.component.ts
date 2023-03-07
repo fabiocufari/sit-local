@@ -18,16 +18,8 @@ export class AcquisizioneDatiRegistroRegionaleComponent implements OnInit {
   constructor(private fb :FormBuilder) { }
 
   ngOnInit(): void {
-    console.log()
+ 
   }
 
-  onPhotoUploaded() {
-    this.isDisabled = false;
-    console.log("onPhotoUpdated")
-  }
-
-  caricaFoto() {
-    this.onPhotoUploaded();
-    console.log("caricaFoto")
-  }
+ 
 }

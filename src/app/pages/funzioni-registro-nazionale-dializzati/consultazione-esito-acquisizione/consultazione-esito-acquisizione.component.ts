@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { colType } from 'src/app/shared/components/custom-table/colType.enum';
+import { ModalService } from 'src/app/shared/components/modal/modal.service';
 
 @Component({
   selector: 'app-consultazione-esito-acquisizione',
   templateUrl: './consultazione-esito-acquisizione.component.html',
-  styleUrls: ['./consultazione-esito-acquisizione.component.scss']
+  styleUrls: ['./consultazione-esito-acquisizione.component.scss'],
 })
 export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
   clickInfo: any;
 
 
 
-  constructor() { }
+  constructor(public modal :ModalService) { }
 
   headers = [
     {head:'Agenzia',type:colType.string},
@@ -46,7 +47,9 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
   clickEvent(e: any){
     console.log(e)
     this.clickInfo={id: e.id,action :e.action}
+    this.modal.display(true,'titolo')
 
+  
   }
 
 }

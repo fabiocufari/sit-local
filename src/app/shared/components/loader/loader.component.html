@@ -1,1 +1,4 @@
-<ds-loader *ngIf="isLoading" is-visible=""></ds-loader>
+<div *ngIf="isLoading" class="progress progress-indeterminate">
+    <span class="visually-hidden">In elaborazione...</span>
+    <div class="progress-bar" role="progressbar"></div>
+  </div>
