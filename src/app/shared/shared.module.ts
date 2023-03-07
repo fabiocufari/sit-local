@@ -18,6 +18,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { IconComponent } from './components/icon/icon.component';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TooltipDirective } from './directive/tooltip.directive';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -34,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     SearchBoxComponent,
     IconComponent,
     CustomTableComponent,
+    TooltipDirective,
   ],
   imports: [
     CommonModule,

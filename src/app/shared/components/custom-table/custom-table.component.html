@@ -49,7 +49,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of data ;let rowNum = index">
-          
+
           <ng-container *ngFor="let col of item; let colNum = index">
 
             <td *ngIf="headers[colNum].type==colType.string" class="typeString">{{col}}</td>
@@ -61,7 +61,7 @@
 
             <td *ngIf="headers[colNum].type==colType.button" class="typeButton">
               <ng-container *ngFor="let button of col">
-                <button type="button" [class]="button.action" (click)="buttonClick(rowNum,button.action)"
+                <button type="button" [class]="button.action" appTooltip (click)="buttonClick(rowNum,button.action)"
                   data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title">
                   <app-icon class="icon icon-secondary" [name]="button.icon"></app-icon>
                 </button>
