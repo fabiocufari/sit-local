@@ -1,21 +1,19 @@
-<div class="border-card">
+<div class="border-card" [ngClass]="validation ? '' : 'error'">
     <div class="p-3 cont" >
       <div class="title">
         <h5 class="mb-2 bold">{{title}}</h5>
       </div>
       <div class="mb-2">
-        <span >nessun file selezionato</span>
+        <span >{{(fileInput.value.length>0) ? cleanName(fileInput.value) : defaultPlaceholder}}</span>
       </div>
 
       <div class="button">
-        <button type="button" class="btn link-button">
-        <app-icon name="upload" class="ico-upload"></app-icon>
+        <button type="button" class="btn link-button" (click)="fileInput.click()">
+        <app-icon name="upload"  class="ico-upload"></app-icon>
           Scegli file
         </button>
-
-
-
-
+        <input (change)="getFileDetails($event)"  #fileInput type="file" [formControlName]="controlName" hidden [accept]="fileType">
+        
       </div>
     </div>
   </div>

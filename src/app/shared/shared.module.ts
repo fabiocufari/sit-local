@@ -17,6 +17,7 @@ import { TitleSectionComponent } from './components/title-section/title-section.
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { IconComponent } from './components/icon/icon.component';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
+import { ReactiveFormsModule } from '@angular/forms';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -37,6 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   imports: [
     CommonModule,
     SharedRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
   TranslateModule
   ],

@@ -210,12 +210,12 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
 
 
   data = [
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},{title:'Button',action:'deleteButton',icon:'upload'}],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'},{title:'Prova',action:'editButton',icon:'upload'}]],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'}]],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'}]],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'}]],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'}]],
+      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'}]],
   
    
   ]

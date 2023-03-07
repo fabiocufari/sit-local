@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-acquisizione-dati-registro-regionale',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcquisizioneDatiRegistroRegionaleComponent implements OnInit {
   isDisabled = true;
+  uploadForm = this.fb.group({
+    uploadDatiAnagrafici: ['',Validators.required],
+    uploadDatiComorbidita: ['',Validators.required],
+    uploadDatiEventi: ['',Validators.required],
+  });
 
-  constructor() { }
+
+  constructor(private fb :FormBuilder) { }
 
   ngOnInit(): void {
     console.log()
