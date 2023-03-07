@@ -128,23 +128,62 @@
   </div>
   <div class="row">
     <div class="col">
+
       <div class="consenso-donazione-radio">
+        <h5 class="bold">Consenso alla Donazione</h5>
         <div class="form-check form-check-inline">
           <input name="gruppo2" type="radio" id="radio4" checked>
-          <label for="radio4">Opzione 1</label>
+          <label for="radio4">SI</label>
         </div>
         <div class="form-check form-check-inline">
           <input name="gruppo2" type="radio" id="radio5">
-          <label for="radio5">Opzione 2</label>
+          <label for="radio5">NO</label>
         </div>
     </div>
     </div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col"></div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active" for="dateStandard">Data di Dichiarazione*</label>
+        <input type="date">
+    </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active" for="dateStandard">Data di Accettazione*</label>
+        <input type="date">
+    </div>
+    </div>
   </div>
   <!-- dati di consenso -->
-
+<!-- Identificazione Dichiarante -->
+<div class="section-form mt-4 mb-4">
+  <h5 class="text-uppercase bold">Identificazione Dichiarante</h5>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="select-wrapper  mt-2">
+      <label for="defaultSelect">Tipo di Documento*</label>
+      <select id="defaultSelect" class="form-select custom-arrow" placeholder="Scegli il Tipo di Documento">
+        <option selected="" value="" class="fst-italic">Scegli il Tipo di Documento</option>
+        <option value="1">Doc 1</option>
+        <option value="2">Doc 2</option>
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Numero del Documento*</label>
+      <input type="text" class="form-control" placeholder="Inserisci Numero Documento">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Rilasciato da*</label>
+      <input type="text" class="form-control" placeholder="Inserisci Rilasciato da">
+    </div>
+  </div>
+</div>
+<!-- Identificazione Dichiarante -->
 
 </form>
 </div>
