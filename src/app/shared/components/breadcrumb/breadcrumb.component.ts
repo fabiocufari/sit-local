@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
@@ -12,9 +13,15 @@ export class BreadcrumbComponent {
       if (event instanceof NavigationEnd) {
         this.breadcrumbList = [];
         
-        this.titleService.setTitle('Sistema Informativo Trapianti - '+this.getTitleFromRoute(this.router.routerState.snapshot.root));
+        
         this.buildBreadcrumbList();
-       
+        let titleString='Sistema Informativo Trapianti '
+       this.breadcrumbList.forEach(x=>{
+        
+        if (x.label) {
+        titleString=titleString +' - '+x.label}
+       })
+       this.titleService.setTitle(titleString);
       }
     });
   }
