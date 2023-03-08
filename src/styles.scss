@@ -57,7 +57,7 @@ textarea{height: inherit; }
 .btn-primary, .btn-icon{background: $Charcoal; }
 .btn-primary:hover, .btn-icon:hover{background: $Black_coral; }
 .chevron{width: 20px; height: 20px;}
-.btn-primary.disabled, .btn-icon.disabled, btn:disabled{ background: $Cultured; border:1px solid $Spanish_gray; color: $Black_coral;}
+.btn-primary.disabled, .btn-icon.disabled, .btn-primary:disabled, .btn-secondary:disabled{ background: $Cultured; border:1px solid $Spanish_gray; color: $Black_coral;}
 
 .btn-secondary{background: transparent; border: 1px solid $Charcoal; color: $Charcoal;}
 .btn-secondary:hover{background: $Exlight_blue; border: 1px solid $Charcoal; color: $Charcoal;}
