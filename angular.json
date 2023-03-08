@@ -30,9 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css",
+              "node_modules/bootstrap-italia/src/scss/bootstrap-italia.scss",
               "src/styles.scss"
-              
             ],
             "scripts": [
            
