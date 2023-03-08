@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { InserimentoNuovaDichiarazioneVolontaComponent } from './inserimento-nuova-dichiarazione-volonta/inserimento-nuova-dichiarazione-volonta.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DichiarazioniDiVolontaRoutingModule } from './dichiarazioni-di-volonta-routing.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
@@ -15,7 +16,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
     CommonModule,
     SharedModule,
     TranslateModule,
-    DichiarazioniDiVolontaRoutingModule
+    DichiarazioniDiVolontaRoutingModule,
+    ReactiveFormsModule
   ],
   schemas : [],
   exports :[TranslateModule]

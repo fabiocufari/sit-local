@@ -2,7 +2,7 @@
   <app-title-section title="Inserimento Nuova Dichiarazione di Volontà" icon="addFile" ></app-title-section>
 
 <!-- form -->
-<form>
+<form [formGroup]="insertNewDeclarationForm">
   <div class="section-form mt-3 mb-4">
     <h5 class="text-uppercase bold">Dati Anagrafici</h5>
   </div>
@@ -11,26 +11,26 @@
     <div class="col">
       <div class="form-group mt-2">
         <label class="active">Codice Fiscale*</label>
-        <input type="text" class="form-control" placeholder="Inserisci Codice Fiscale" >
+        <input type="text" class="form-control" placeholder="Inserisci Codice Fiscale" formControlName="codiceFiscale">
         <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso"></button></div> -->
       </div>
     </div>
     <div class="col">
       <div class="form-group mt-2">
         <label class="active">Nome*</label>
-        <input type="text" class="form-control" placeholder="Inserisci Nome">
+        <input type="text" class="form-control" placeholder="Inserisci Nome" formControlName="nome">
       </div>
     </div>
     <div class="col">
       <div class="form-group mt-2">
         <label class="active">Cognome*</label>
-        <input type="text" class="form-control" placeholder="Inserisci Cognome">
+        <input type="text" class="form-control" placeholder="Inserisci Cognome" formControlName="cognome">
       </div>
     </div>
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Sesso*</label>
-        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci Cognome">
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci il Sesso" formControlName="sesso">
           <option value="Maschio">Maschio</option>
           <option value="Femmina">Femmina</option>
         </select>
@@ -41,13 +41,13 @@
     <div class="col">
       <div class="form-group mt-2">
         <label class="active" for="dateStandard">Data di nascita*</label>
-        <input type="date">
+        <input type="date" formControlName="dataNascita">
     </div>
     </div>
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Nazione di nascita*</label>
-        <select id="defaultSelect" class="form-select custom-arrow">
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="nazioneNascita">
           <option selected="" value="" class="fst-italic">Scegli una Nazione</option>
           <option value="1">Nazione 1</option>
           <option value="2">Nazione 2</option>
@@ -57,7 +57,7 @@
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Provincia di nascita*</label>
-        <select id="defaultSelect" class="form-select custom-arrow">
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="provinciaNascita">
           <option selected="" value="" class="fst-italic">Scegli una Provincia</option>
           <option value="1">Provincia 1</option>
           <option value="2">Provincia 2</option>
@@ -67,7 +67,7 @@
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Comune di nascita*</label>
-        <select id="defaultSelect" class="form-select custom-arrow">
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="comuneNascita">
           <option selected="" value="" class="fst-italic">Scegli un Comune</option>
           <option value="1">Comune 1</option>
           <option value="2">Comune 2</option>
@@ -84,19 +84,19 @@
     <div class="col">
       <div class="form-group mt-2">
         <label class="active">Indirizzo di Residenza*</label>
-        <input type="text" class="form-control" placeholder="Inserisci Indirizzo di Residenza" >
+        <input type="text" class="form-control" placeholder="Inserisci Indirizzo di Residenza" formControlName="indirizzoResidenza" >
       </div>
     </div>
     <div class="col">
       <div class="form-group mt-2">
         <label class="active">CAP*</label>
-        <input type="text" class="form-control" placeholder="Inserisci CAP">
+        <input type="text" class="form-control" placeholder="Inserisci CAP" formControlName="cap">
       </div>
     </div>
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Provincia di Residenza*</label>
-        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci la Provincia di Residenza">
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci la Provincia di Residenza" formControlName="provinciaResidenza">
           <option selected="" value="" class="fst-italic">Scegli la Provincia di Residenza</option>
           <option value="1">Provincia 1</option>
           <option value="2">Provincia 2</option>
@@ -106,7 +106,7 @@
     <div class="col">
       <div class="select-wrapper  mt-2">
         <label for="defaultSelect">Comune di Residenza*</label>
-        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci il Comune di Residenza">
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci il Comune di Residenza" formControlName="comuneResidenza">
           <option selected="" value="" class="fst-italic">Scegli il Comune di Residenza</option>
           <option value="1">Comune 1</option>
           <option value="2">Comune 2</option>
