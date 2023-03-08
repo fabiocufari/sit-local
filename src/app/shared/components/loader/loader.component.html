@@ -1,4 +1,7 @@
-<div *ngIf="isLoading" class="progress progress-indeterminate">
+<div *ngIf="isLoading">
+  <div class="loader-overlay"></div>
+  <div class="progress progress-indeterminate">
     <span class="visually-hidden">In elaborazione...</span>
     <div class="progress-bar" role="progressbar"></div>
   </div>
+</div>
