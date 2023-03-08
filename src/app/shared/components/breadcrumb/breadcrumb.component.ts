@@ -48,11 +48,9 @@ export class BreadcrumbComponent {
   }
 
   getTitleFromRoute(route: any): string {
-    // Traverse the route tree to get the last activated route
     while (route.firstChild) {
       route = route.firstChild;
     }
-    // Return the title of the last activated route, or the default title if none is found
     return route.data && route.data.breadcrumb ? route.data.breadcrumb : 'Default Title';
   }
 }
