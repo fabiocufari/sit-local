@@ -1,12 +1,12 @@
-@import '/src/styles.scss';
+@import '/src/color_variables.scss';
 
 .footer-link{
     color: $Vivid_sky;
 }
 
 li{
-    font-size: 18px; 
-    color: #49CFFA; 
+    font-size: 18px;
+    color: #49CFFA;
     text-decoration: underline;
 }
 

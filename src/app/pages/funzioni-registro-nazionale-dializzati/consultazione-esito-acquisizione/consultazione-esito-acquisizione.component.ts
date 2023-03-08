@@ -25,12 +25,12 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
     {head:'Totale Disall Anagr',type:colType.number},
     {head:'File inviato',type:colType.downloadLink},
     {head:'File esito',type:colType.downloadLink},
-     {head:'Button Test',type:colType.button},
+     //{head:'Button Test',type:colType.button},
   ]
 
 
   data = [
-      ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'},{title:'Prova',action:'editButton',icon:'upload'}]],
+      //['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'},[{title:'Button',action:'deleteButton',icon:'upload'},{title:'Prova',action:'editButton',icon:'upload'}]],
       ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'}],
       ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'}],
       ['Lazio','30/09/2023 18:45','Anagrafe',1,3,2,2,{title:'fileAnagrafica.txt',link:'/funzioni-registro-nazionale-dializzati'},{title:'120_A_2023_20230124_141544.txt',link:'routing'}],
@@ -42,7 +42,7 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
 
 
   ngOnInit(): void {
-  
+
   }
 
   clickEvent(e: any){
@@ -54,7 +54,7 @@ export class ConsultazioneEsitoAcquisizioneComponent implements OnInit {
       console.log(x)
     })
 
-  
+
   }
 
 }
