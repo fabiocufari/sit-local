@@ -7,11 +7,19 @@ import { InserimentoNuovaDichiarazioneVolontaComponent } from './inserimento-nuo
 const routes: Routes = [
   {
     path: 'inserimento-dichiarazione-volonta',
-    component: InserimentoNuovaDichiarazioneVolontaComponent
+    component: InserimentoNuovaDichiarazioneVolontaComponent,
+    data: {
+      breadcrumb: 'Aggiungi nuova Dichiarazione di Volontà',
+      level: 2
+    }
   },
   {
   path: '',
-  component: MainComponent
+  component: MainComponent,
+  data: {
+    breadcrumb: 'Navigazione',
+    level: 2
+  }
   },
 ];
 

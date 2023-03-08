@@ -23,10 +23,10 @@
     <app-icon [name]="icon" class="compact-icon mt-2 icon text-primary" tooltip="Modifica">
     </app-icon>
     <div class="separatore ms-4 me-4"></div>
-    <h2 class="custom-text">
+    <h5 class="custom-text">
       {{title}}
-    </h2>
-    <button class="btn btn-primary btn-xs btn-icon ms-1 mt-2 custom-action">
+    </h5>
+    <button class="btn btn-primary btn-xs btn-icon ms-1 mt-2 custom-action" [routerLink]="link">
         <span class="text-uppercase">Entra</span>
         <app-icon name="chevronDx" class="chevron icon-white ms-4"></app-icon>
     </button>

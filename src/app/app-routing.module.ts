@@ -9,7 +9,8 @@ const routes: Routes = [
 },
 {
   path: 'dichiarazioni-di-volonta',
-  loadChildren: () => import('./pages/dichiarazioni-di-volonta/dichiarazioni-di-volonta.module').then(m => m.DichiarazioniDiVolontaModule)
+  loadChildren: () => import('./pages/dichiarazioni-di-volonta/dichiarazioni-di-volonta.module').then(m => m.DichiarazioniDiVolontaModule),
+  data: { breadcrumb: 'Dichiarazioni di Volontà', level: 1 }
 },
 {
   path: '',
