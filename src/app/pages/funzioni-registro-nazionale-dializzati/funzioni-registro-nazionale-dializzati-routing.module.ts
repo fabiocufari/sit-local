@@ -4,7 +4,7 @@ import { MainComponent } from './main/main.component';
 import { AcquisizioneDatiRegistroRegionaleComponent } from './acquisizione-dati-registro-regionale/acquisizione-dati-registro-regionale.component';
 import { ConsultazioneEsitoAcquisizioneComponent } from './consultazione-esito-acquisizione/consultazione-esito-acquisizione.component';
 import { EsportazioneRegistroDializzatiComponent } from './esportazione-registro-dializzati/esportazione-registro-dializzati.component';
-import {AuthGuard} from '../../guard.guard'
+
 const routes: Routes = [{
     path: 'acquisizione-dati-registro-regionale',
     component: AcquisizioneDatiRegistroRegionaleComponent,
@@ -12,7 +12,7 @@ const routes: Routes = [{
       breadcrumb: 'Acquisizione dati Registro Regionale',
       level: 2
     },
-  //  canActivate: [AuthGuard]
+    
   },
   {
     path: 'consultazione-esito-acquisizione',

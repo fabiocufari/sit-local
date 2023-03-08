@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent {
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,private titleService: Title) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.breadcrumbList = [];
+        
+        this.titleService.setTitle('Sistema Informativo Trapianti - '+this.getTitleFromRoute(this.router.routerState.snapshot.root));
         this.buildBreadcrumbList();
        
       }
@@ -42,5 +45,14 @@ export class BreadcrumbComponent {
         }
       });
     } while (currentRoute);
+  }
+
+  getTitleFromRoute(route: any): string {
+    // Traverse the route tree to get the last activated route
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+    // Return the title of the last activated route, or the default title if none is found
+    return route.data && route.data.breadcrumb ? route.data.breadcrumb : 'Default Title';
   }
 }

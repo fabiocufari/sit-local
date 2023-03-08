@@ -22,6 +22,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConsultazioneEsitoAcquisizioneComponent,
     EsportazioneRegistroDializzatiComponent
   ],
+  providers: [],
   imports: [
     CommonModule,
     ReactiveFormsModule,
