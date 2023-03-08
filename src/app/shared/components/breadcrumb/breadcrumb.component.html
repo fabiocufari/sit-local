@@ -1,0 +1,15 @@
+<nav class="breadcrumb-container" aria-label="Percorso di navigazione">
+  <ol class="breadcrumb">
+
+    <li class="breadcrumb-item"><a href="#"><svg class="icon icon-sm icon-padded">
+          <use href="/assets/svg/sprites.svg#it-list"></use>
+        </svg> Centro Nazionale Trapianti</a><span class="separator">&gt;</span></li>
+    <li class="breadcrumb-item"><a href="#">Menu Principale SIT</a><span class="separator">&gt;</span></li>
+    <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbList"
+      [ngClass]="{'active': breadcrumb.url === currentUrl}">
+      <a *ngIf="breadcrumb.url !== currentUrl" [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+      <span *ngIf="breadcrumb.url === currentUrl"><span class="separator">&gt;</span>{{ breadcrumb.label }}</span>
+    </li>
+  </ol>
+
+</nav>

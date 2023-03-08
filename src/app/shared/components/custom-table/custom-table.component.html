@@ -1,0 +1,78 @@
+<div class="row mt-3">
+  <div class="col">
+    <div class="select-wrapper  justify-content-start">
+      <label for="defaultSelect">Elementi per pagina</label>
+      <select id="defaultSelect" class="form-select element-page">
+        <option selected="" value="">10</option>
+        <option value="Value 1">20</option>
+        <option value="Value 2">30</option>
+        <option value="Value 3">40</option>
+        <option value="Value 4">50</option>
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <nav class="pagination-wrapper justify-content-end" aria-label="Navigazione allineata a destra">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-hidden="true">
+            <app-icon class="icon icon-secondary" name="chevronSx"></app-icon>
+            <span class="visually-hidden">Pagina precedente</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-current="page">
+            <span class="d-inline-block d-sm-none">Pagina </span>1
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">
+            <span class="visually-hidden">Pagina successiva</span>
+            <app-icon class="icon icon-secondary" name="chevronDx"></app-icon>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th *ngFor="let head of headers">{{head.head}}</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data ;let rowNum = index">
+
+          <ng-container *ngFor="let col of item; let colNum = index">
+
+            <td *ngIf="headers[colNum].type==colType.string" class="typeString">{{col}}</td>
+
+            <td *ngIf="headers[colNum].type==colType.number" class="typeNumber text-end">{{col}}</td>
+
+            <td *ngIf="headers[colNum].type==colType.downloadLink" class="typeDownloadLink"><a
+                [routerLink]="col.link">{{col.title}}</a></td>
+
+            <td *ngIf="headers[colNum].type==colType.button" class="typeButton">
+              <ng-container *ngFor="let button of col">
+                <button type="button" [class]="button.action" appTooltip (click)="buttonClick(rowNum,button.action)"
+                  data-bs-toggle="tooltip" data-bs-placement="top" [title]="button.title">
+                  <app-icon class="icon icon-secondary" [name]="button.icon"></app-icon>
+                </button>
+              </ng-container>
+            </td>
+
+            <td *ngIf="headers[colNum].type==colType.icon" class="typeNumber text-center">icon {{col}}</td>
+          </ng-container>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -9,7 +9,7 @@ export class CustomCardComponent implements OnInit {
   @Input("title") title:string=''
   @Input("icon") icon:string=''
   @Input("link") link:string=''
-
+  @Input("compact") compact:boolean=false
   constructor() { }
 
   ngOnInit(): void {

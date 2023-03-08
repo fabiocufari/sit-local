@@ -1,6 +1,5 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FunzioniRegistroNazionaleDializzatiRoutingModule } from './funzioni-registro-nazionale-dializzati-routing.module';
 import { MainComponent } from './main/main.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -10,6 +9,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { EsportazioneRegistroDializzatiComponent } from './esportazione-registro-dializzati/esportazione-registro-dializzati.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -21,13 +22,16 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConsultazioneEsitoAcquisizioneComponent,
     EsportazioneRegistroDializzatiComponent
   ],
+  providers: [],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     SharedModule,
     TranslateModule,
     FunzioniRegistroNazionaleDializzatiRoutingModule
   ],
-  schemas : [CUSTOM_ELEMENTS_SCHEMA],
-  exports :[TranslateModule]
+  schemas : [],
+  exports :[TranslateModule],
+ 
 })
 export class FunzioniRegistroNazionaleDializzatiModule { }

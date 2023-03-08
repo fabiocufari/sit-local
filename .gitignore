@@ -1,8 +1,43 @@
-node_modules
-.angular
-angular
-.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/index.pack.old
-.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/index.pack
-.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/2.pack
-.angular/cache/13.1.4/angular-webpack/6e4cbab3261bbc176af46f0695b821f7e2386f1e/1.pack
-*.pack
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+package-lock.json

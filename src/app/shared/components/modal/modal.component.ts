@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Element } from '@angular/compiler';
+import { AfterViewInit, Component,  ElementRef,  OnInit, TemplateRef, ViewChild } from '@angular/core';
+import * as bootstrap from 'bootstrap';
 import { ModalService } from '../modal/modal.service';
 
 @Component({
@@ -6,24 +8,48 @@ import { ModalService } from '../modal/modal.service';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit,AfterViewInit{
   
   title=''
   isOpen={"status": false}
   response: any
-
-  constructor(private modalService: ModalService) {
+	@ViewChild("modal") modal: TemplateRef<any> | undefined;
+  myModal!: bootstrap.Modal;
+  constructor(public modalService: ModalService) {
   }
-
+  
+  
   ngOnInit(): void {
+    
+
     this.modalService.status.subscribe((val: boolean) => {
-      this.isOpen = {"status": val};
-      this.title=this.modalService.title
+     
+      if (this.modal) {  
+        if(val){
+          this.modalService.setResponse('')
+        this.myModal.show() 
+        this.title=this.modalService.title
+      }
+        else {
+          this.myModal.hide() 
+
+      }
+      }
+     
+      
     });
   }
+  ngAfterViewInit(){
+    if (this.modal) {
+      this.myModal = new bootstrap.Modal('#modal', {
+        keyboard: false,
+      })
 
+    }
+ }
   onClose(e: any){
-    this.modalService.setResponse(this.response)
+    
+    this.modalService.setResponse('close')
   }
 
 }

@@ -1,4 +1,4 @@
-@import '/src/styles.scss';
+@import '/src/color_variables.scss';
 
 .it-header-slim-wrapper{
   background: $Charcoal;
@@ -17,7 +17,7 @@
 
 }
 .underheader{
-  height: 100px; width: 100%; background: $light_blue; padding: 0px 2.6667rem;
+  height: 100px; width: 100%; background:$Exlight_azure; padding: 0px 2.6667rem;
   .burger{width: 40px; height: 40px; color: $Celtic;}
   .row{height: 100px;}
 }

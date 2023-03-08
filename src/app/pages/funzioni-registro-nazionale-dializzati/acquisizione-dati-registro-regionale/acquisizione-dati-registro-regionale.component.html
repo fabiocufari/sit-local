@@ -1,74 +1,80 @@
 <div class="container mb-5 mt-1 general">
-  <app-title-section title="Acquisizione Dati Registro Regionale" icon="download" ></app-title-section>
+  <app-title-section title="Acquisizione Dati Registro Regionale" icon="download"></app-title-section>
 
-<!-- BLOCCO FORM -->
-<div >
-  <h4 class="mt-4 bold">Allega Documenti</h4>
-  <p >Sono ammessi file con estensione .txt, .zip, e con un limite di record di 10.000.<br/>
-    Per il servizio scelto sono richiesti i seguenti documenti:
-  </p>
+  <!-- BLOCCO FORM -->
+  <div>
+    <h4 class="mt-4 bold">Allega Documenti</h4>
+    <p>Sono ammessi file con estensione .txt, .zip, e con un limite di record di 10.000.<br />
+      Per il servizio scelto sono richiesti i seguenti documenti:
+    </p>
+   <code> form data : {{uploadForm.value | json}} <br>
+    validita' : {{uploadForm.valid}}
+  </code>
+    <form [formGroup]="uploadForm">
+      <div class="row mt-5 justify-content-center">
 
-  <div class="row mt-5 justify-content-center">
+        <div class="col-4">
+          <app-custom-upload title="INVIA DATI ANAGRAFICI" controlName="uploadDatiAnagrafici" fileType=".zip,.txt" [validation]="uploadForm.controls.uploadDatiAnagrafici.valid"  defaultPlaceholder="Nessun File Selezionato"></app-custom-upload>
+        </div>
+        <div class="col-4">
+          <app-custom-upload title="INVIA DATI SULLE COMORBIDITA'" controlName="uploadDatiComorbidita" fileType=".zip,.txt" [validation]="uploadForm.controls.uploadDatiComorbidita.valid"  defaultPlaceholder="Nessun File Selezionato">
+          </app-custom-upload>
+        </div>
+        <div class="col-4">
+          <app-custom-upload title="INVIA DATI RELATIVI AGLI EVENTI" controlName="uploadDatiEventi" fileType=".zip,.txt" [validation]="uploadForm.controls.uploadDatiEventi.valid" defaultPlaceholder="Nessun File Selezionato"></app-custom-upload>
+        </div>
 
-    <div class="col-4">
-      <app-custom-upload title="INVIA DATI ANAGRAFICI" (click)="onPhotoUploaded()"></app-custom-upload>
-    </div>
-    <div class="col-4">
-      <app-custom-upload title="INVIA DATI SULLE COMORBIDITA'"></app-custom-upload>
-    </div>
-    <div class="col-4">
-      <app-custom-upload title="INVIA DATI RELATIVI AGLI EVENTI"></app-custom-upload>
-    </div>
-  </div>
-  <div class="row mt-5">
-    <div class="col">
-      <button class="btn btn-secondary btn-dx btn-icon ms-2 mt-2" >
-        <span class="text-uppercase mr-2 pe-3 ps-3" >Indietro</span>
-    </button>
-  </div>
-  <div class="col d-flex justify-content-end">
-    <button class="btn btn-primary btn-dx btn-icon mt-2 ms-2 ml-2 "  [disabled]="isDisabled">
-      <span class="text-uppercase mr-3 pe-3 ps-3">invia</span>
-  </button>
-  </div>
-  </div>
-</div>
-<!-- BLOCCO FORM -->
-<!-- BLOCCO RESULTS -->
-<div style="display: none;">
-  <h3 class="bold text-center mt-5 mb-3">Esito invio Registro Dializzati</h3>
-  <div class="box-standard result p-4">
-    <div class="row">
-      <div class="col">
-        <h5 class="text-uppercase bold">Anagrafica</h5>
-        <p >Inviato: SI</p>
-        <p >Esito invio: POSITIVO</p>
-        <p >Messaggi: SIZE = 288</p>
       </div>
-      <div class="col">
-        <h5 class="text-uppercase bold">Comorbidità</h5>
-        <p >Inviato: SI</p>
-        <p >Esito invio: POSITIVO</p>
-        <p >Messaggi: SIZE = 122</p>
+      <div class="row mt-5">
+        <div class="col">
+          <button routerLink="/funzioni-registro-nazionale-dializzati" class="btn btn-secondary btn-dx btn-icon ms-2 mt-2">
+            <span class="text-uppercase mr-2 pe-3 ps-3">Indietro</span>
+          </button>
+        </div>
+        <div class="col d-flex justify-content-end">
+          <button class="btn btn-primary btn-dx btn-icon mt-2 ms-2 ml-2 " [disabled]="!uploadForm.valid">
+            <span class="text-uppercase mr-3 pe-3 ps-3">invia</span>
+          </button>
+        </div>  
       </div>
-      <div class="col">
-        <h5 class="text-uppercase bold">Eventi</h5>
-        <p >Inviato: SI</p>
-        <p >Esito invio: POSITIVO</p>
-        <p >Messaggi: SIZE = 262</p>
+    </form>
+  </div>
+  <!-- BLOCCO FORM -->
+  <!-- BLOCCO RESULTS -->
+  <div style="display: none;">
+    <h3 class="bold text-center mt-5 mb-3">Esito invio Registro Dializzati</h3>
+    <div class="box-standard result p-4">
+      <div class="row">
+        <div class="col">
+          <h5 class="text-uppercase bold">Anagrafica</h5>
+          <p>Inviato: SI</p>
+          <p>Esito invio: POSITIVO</p>
+          <p>Messaggi: SIZE = 288</p>
+        </div>
+        <div class="col">
+          <h5 class="text-uppercase bold">Comorbidità</h5>
+          <p>Inviato: SI</p>
+          <p>Esito invio: POSITIVO</p>
+          <p>Messaggi: SIZE = 122</p>
+        </div>
+        <div class="col">
+          <h5 class="text-uppercase bold">Eventi</h5>
+          <p>Inviato: SI</p>
+          <p>Esito invio: POSITIVO</p>
+          <p>Messaggi: SIZE = 262</p>
+        </div>
       </div>
     </div>
+    <div class="row mt-5">
+      <div class="col">
+        <button class="btn btn-secondary btn-dx btn-icon mt-2 ps-3 pe-3">
+          <span class="text-uppercase ">Indietro</span>
+        </button>
+      </div>
+      <div class="col d-flex justify-content-end">
+      </div>
+    </div>
   </div>
-  <div class="row mt-5">
-    <div class="col">
-      <ds-button type="button" color="secondary" size="small" title="Click the button" aria-label="This is the label for screen readers" sr-text="Lorem Ipsum">
-      Indietro
-    </ds-button>
-  </div>
-  <div class="col d-flex justify-content-end">
-  </div>
-  </div>
-</div>
-<!-- BLOCCO RESULTS -->
+  <!-- BLOCCO RESULTS -->
 
 </div>

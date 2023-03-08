@@ -1,0 +1,275 @@
+<div class="container mb-5 general">
+  <app-title-section title="Inserimento Nuova Dichiarazione di Volontà" icon="addFile" ></app-title-section>
+
+<!-- form -->
+<form [formGroup]="insertNewDeclarationForm">
+  <div class="section-form mt-3 mb-4">
+    <h5 class="text-uppercase bold">Dati Anagrafici</h5>
+  </div>
+  <!-- dati anagrafici -->
+  <div class="row ">
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active">Codice Fiscale*</label>
+        <input type="text" class="form-control" placeholder="Inserisci Codice Fiscale" formControlName="codiceFiscale">
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Attenzione</strong> Alcuni campi inseriti sono da controllare.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi avviso"></button></div> -->
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active">Nome*</label>
+        <input type="text" class="form-control" placeholder="Inserisci Nome" formControlName="nome">
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active">Cognome*</label>
+        <input type="text" class="form-control" placeholder="Inserisci Cognome" formControlName="cognome">
+      </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Sesso*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci il Sesso" formControlName="sesso">
+          <option value="Maschio">Maschio</option>
+          <option value="Femmina">Femmina</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active" for="dateStandard">Data di nascita*</label>
+        <input type="date" formControlName="dataNascita">
+    </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Nazione di nascita*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="nazioneNascita">
+          <option selected="" value="" class="fst-italic">Scegli una Nazione</option>
+          <option value="1">Nazione 1</option>
+          <option value="2">Nazione 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Provincia di nascita*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="provinciaNascita">
+          <option selected="" value="" class="fst-italic">Scegli una Provincia</option>
+          <option value="1">Provincia 1</option>
+          <option value="2">Provincia 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Comune di nascita*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" formControlName="comuneNascita">
+          <option selected="" value="" class="fst-italic">Scegli un Comune</option>
+          <option value="1">Comune 1</option>
+          <option value="2">Comune 2</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- dati anagrafici -->
+  <!-- dati residenza -->
+  <div class="section-form mt-4 mb-4">
+    <h5 class="text-uppercase bold">Dati di Residenza</h5>
+  </div>
+  <div class="row ">
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active">Indirizzo di Residenza*</label>
+        <input type="text" class="form-control" placeholder="Inserisci Indirizzo di Residenza" formControlName="indirizzoResidenza" >
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active">CAP*</label>
+        <input type="text" class="form-control" placeholder="Inserisci CAP" formControlName="cap">
+      </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Provincia di Residenza*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci la Provincia di Residenza" formControlName="provinciaResidenza">
+          <option selected="" value="" class="fst-italic">Scegli la Provincia di Residenza</option>
+          <option value="1">Provincia 1</option>
+          <option value="2">Provincia 2</option>
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="select-wrapper  mt-2">
+        <label for="defaultSelect">Comune di Residenza*</label>
+        <select id="defaultSelect" class="form-select custom-arrow" placeholder="Inserisci il Comune di Residenza" formControlName="comuneResidenza">
+          <option selected="" value="" class="fst-italic">Scegli il Comune di Residenza</option>
+          <option value="1">Comune 1</option>
+          <option value="2">Comune 2</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center mt-4">
+      <h5 class="bold">Ausl di Appartenenza</h5>
+      <p class="bold mt-2">Ausl di Roma</p>
+    </div>
+
+  </div>
+  <!-- dati residenza -->
+  <!-- dati di consenso -->
+  <div class="section-form mt-2 mb-3">
+    <h5 class="text-uppercase bold">Dati di Consenso</h5>
+  </div>
+  <div class="row">
+    <div class="col">
+
+      <div class="consenso-donazione-radio">
+        <h5 class="bold">Consenso alla Donazione</h5>
+        <div class="form-check form-check-inline">
+          <input name="gruppo2" type="radio" id="radio4" checked>
+          <label for="radio4">SI</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="gruppo2" type="radio" id="radio5">
+          <label for="radio5">NO</label>
+        </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active" for="dateStandard">Data di Dichiarazione*</label>
+        <input type="date">
+    </div>
+    </div>
+    <div class="col">
+      <div class="form-group mt-2">
+        <label class="active" for="dateStandard">Data di Accettazione*</label>
+        <input type="date">
+    </div>
+    </div>
+  </div>
+  <!-- dati di consenso -->
+<!-- Identificazione Dichiarante -->
+<div class="section-form mt-4 mb-4">
+  <h5 class="text-uppercase bold">Identificazione Dichiarante</h5>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="select-wrapper  mt-2">
+      <label for="defaultSelect">Tipo di Documento*</label>
+      <select id="defaultSelect" class="form-select custom-arrow" placeholder="Scegli il Tipo di Documento">
+        <option selected="" value="" class="fst-italic">Scegli il Tipo di Documento</option>
+        <option value="1">Doc 1</option>
+        <option value="2">Doc 2</option>
+      </select>
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Numero del Documento*</label>
+      <input type="text" class="form-control" placeholder="Inserisci Numero Documento">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Rilasciato da*</label>
+      <input type="text" class="form-control" placeholder="Inserisci Rilasciato da">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group mt-5">
+      <label class="active" for="dateStandard">Data di rilascio*</label>
+      <input type="date">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-5">
+      <label class="active">Dichiarazione Consegnata/Accettata Da</label>
+      <input type="text" class="form-control" placeholder="Inserisci  Dichiarazione Consegnata o Accettata da">
+    </div>
+  </div>
+  <div class="col"></div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group mt-5 textarea">
+      <label for="exampleFormControlTextarea1">Note</label>
+      <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+  </div>
+</div>
+<!-- Identificazione Dichiarante -->
+<!-- Identificazione Delegato -->
+<div class="section-form mt-4 mb-4">
+  <h5 class="text-uppercase bold">Identificazione Delegato</h5>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Nome</label>
+      <input type="text" class="form-control" placeholder="Inserisci Nome">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-2">
+      <label class="active">Cognome</label>
+      <input type="text" class="form-control" placeholder="Inserisci Cognome">
+    </div>
+  </div>
+
+<div class="col">
+  <div class="select-wrapper  mt-2">
+    <label for="defaultSelect">Tipo di Documento</label>
+    <select id="defaultSelect" class="form-select custom-arrow" placeholder="Scegli il Tipo di Documento">
+      <option selected="" value="" class="fst-italic">Scegli il Tipo di Documento</option>
+      <option value="1">Doc 1</option>
+      <option value="2">Doc 2</option>
+    </select>
+  </div>
+</div>
+<div class="col">
+  <div class="form-group mt-2">
+    <label class="active">Numero del Documento</label>
+    <input type="text" class="form-control" placeholder="Inserisci Numero Documento">
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group mt-5">
+      <label class="active">Rilasciato da*</label>
+      <input type="text" class="form-control" placeholder="Inserisci Rilasciato da">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group mt-5">
+      <label class="active" for="dateStandard">Data di rilascio*</label>
+      <input type="date">
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
+<!-- Identificazione Delegato -->
+<div class="row mt-5">
+  <div class="col">
+    <button class="btn btn-secondary btn-dx btn-icon mt-2 ps-3 pe-3">
+      <span class="text-uppercase ">Indietro</span>
+  </button>
+</div>
+<div class="col d-flex justify-content-end">
+  <button class="btn btn-primary btn-dx btn-icon mt-2 ps-3 pe-3" disabled>
+    <span class="text-uppercase ">Aggiungi Dichiarazione</span>
+</button>
+</div>
+</div>
+</form>
+</div>

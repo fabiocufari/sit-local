@@ -16,6 +16,10 @@ import { CustomUploadComponent } from './components/custom-upload/custom-upload.
 import { TitleSectionComponent } from './components/title-section/title-section.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { IconComponent } from './components/icon/icon.component';
+import { CustomTableComponent } from './components/custom-table/custom-table.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TooltipDirective } from './directive/tooltip.directive';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -31,12 +35,16 @@ export function HttpLoaderFactory(http: HttpClient) {
     TitleSectionComponent,
     SearchBoxComponent,
     IconComponent,
+    CustomTableComponent,
+    TooltipDirective,
+    BreadcrumbComponent,
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule,
-  TranslateModule
+    TranslateModule
   ],
   exports: [
     HeaderComponent,
@@ -47,12 +55,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     CustomUploadComponent,
     TitleSectionComponent,
     SearchBoxComponent,
-    IconComponent
+    IconComponent,
+    CustomTableComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [
-    LoaderService,
-    ModalService
-  ],
+  
 })
 export class SharedModule { }

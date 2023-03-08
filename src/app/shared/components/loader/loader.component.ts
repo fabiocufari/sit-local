@@ -10,12 +10,13 @@ export class LoaderComponent implements OnInit {
 
   isLoading: boolean=true;
 
-  constructor(private loaderService: LoaderService) {
+  constructor(public loaderService: LoaderService) {
   }
 
 
   ngOnInit(): void {
     this.loaderService.status.subscribe((val: boolean) => {
+      console.warn(val)
       this.isLoading = val;
   });
   }

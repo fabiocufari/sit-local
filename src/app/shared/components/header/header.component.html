@@ -1,4 +1,4 @@
-<header class="it-header-wrapper">
+<header class="it-header-wrapper it-header-sticky">
   <div class="it-header-slim-wrapper">
     <div class="container general ">
       <div class="row ms-0 me-0">
@@ -34,8 +34,8 @@
                     <div class="col-12">
                       <div class="link-list-wrapper">
                         <ul class="link-list">
-                          <li><a class="dropdown-item list-item" href="#"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
-                          <li><a class="dropdown-item list-item" href="#"><span>ENG</span></a></li>
+                          <li><a class="dropdown-item list-item" (click)="changeLanguage('it')"><span>ITA <span class="visually-hidden">selezionata</span></span></a></li>
+                          <li><a class="dropdown-item list-item" (click)="changeLanguage('en')"><span>ENG</span></a></li>
                         </ul>
                       </div>
                     </div>
@@ -66,14 +66,9 @@
   </div>
 </div>
 </div>
-
+<div class="container general bg-white">
+  <app-breadcrumb></app-breadcrumb>
+  </div>
+ 
 </header>
-<div class="container general">
-<nav class="breadcrumb-container" aria-label="Percorso di navigazione">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Centro Nazionale Trapianti</a><span class="separator">&gt;</span></li>
-    <li class="breadcrumb-item"><a href="#">Menu Principale SIT</a><span class="separator">&gt;</span></li>
-    <li class="breadcrumb-item active" aria-current="page">Funzioni per il Registro Nazionale Dializzati</li>
-  </ol>
-</nav>
-</div>
+

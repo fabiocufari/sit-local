@@ -1,4 +1,4 @@
-@import '/src/styles.scss';
+@import '/src/color_variables.scss';
 
 
 .icon {
@@ -30,5 +30,41 @@
 
 .border-card {
   border: 3px solid $Celtic;
+
+}
+.custom-card-2{
+  height: 80px;
+  //width:31%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
   border-radius: 10px;
+}
+
+.custom-icon{
+  height: 30px;
+  width: 30px;
+  background-color: black;
+}
+
+.separatore{
+  width: 1px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.custom-text{
+  font-size: 17px;
+  width: 350px;
+}
+
+.custom-action{
+  transform: translate(-35px,35px);
+}
+
+.compact-icon{
+  left: 12px;
+  top:-5px;
+
 }

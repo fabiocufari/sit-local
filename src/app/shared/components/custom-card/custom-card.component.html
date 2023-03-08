@@ -1,4 +1,4 @@
-<div class="border-card">
+<div class="border-card" *ngIf="!compact">
 
   <app-icon [name]="icon" class="icon text-primary" tooltip="Modifica">
   </app-icon>
@@ -16,4 +16,19 @@
 
     </div>
   </div>
+</div>
+<div *ngIf="compact">
+
+  <div class="custom-card-2 ms-1 me-1 mb-5">
+    <app-icon [name]="icon" class="compact-icon mt-2 icon text-primary" tooltip="Modifica">
+    </app-icon>
+    <div class="separatore ms-4 me-4"></div>
+    <h5 class="custom-text">
+      {{title}}
+    </h5>
+    <button class="btn btn-primary btn-xs btn-icon ms-1 mt-2 custom-action" [routerLink]="link">
+        <span class="text-uppercase">Entra</span>
+        <app-icon name="chevronDx" class="chevron icon-white ms-4"></app-icon>
+    </button>
+</div>
 </div>
